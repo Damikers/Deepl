@@ -84,9 +84,9 @@ $$
 Архітектура:
 
 $$
-X\rightarrow\operatorname{Linear}(4,8)
-\rightarrow\operatorname{ReLU}
-\rightarrow\operatorname{Linear}(8,3).
+X\rightarrow\mathrm{Linear}(4,8)
+\rightarrow\mathrm{ReLU}
+\rightarrow\mathrm{Linear}(8,3).
 $$
 
 Усі обчислення виконуються у `float64`. Для параметрів створюється новий,
@@ -107,7 +107,7 @@ $W_1$, потім $W_2$.
 $$
 Z_1=XW_1+b_1,
 \qquad
-A_1=\operatorname{ReLU}(Z_1)=\max(0,Z_1),
+A_1=\mathrm{ReLU}(Z_1)=\max(0,Z_1),
 $$
 
 $$
@@ -124,12 +124,12 @@ $$
 Тоді
 
 $$
-\operatorname{LSE}(Z_{2,i})
+\mathrm{LSE}(Z_{2,i})
 =m_i+\log\sum_k\exp(Z_{2,ik}-m_i),
 $$
 
 $$
-\log Q_{ik}=Z_{2,ik}-\operatorname{LSE}(Z_{2,i}).
+\log Q_{ik}=Z_{2,ik}-\mathrm{LSE}(Z_{2,i}).
 $$
 
 Після зсуву всі аргументи експоненти не перевищують нуля, тому обчислення не
