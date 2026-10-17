@@ -1,5 +1,3 @@
-"""Ручні лічильники та точний пошук порога за O(n log n)."""
-
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
@@ -43,7 +41,6 @@ class Confusion:
 
 
 def validate_inputs(y: np.ndarray, scores: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
-    """Не округлюємо оцінки: float32 -> float64 зберігає їх точно."""
     y = np.asarray(y)
     scores = np.asarray(scores, dtype=np.float64)
     if y.ndim != 1 or scores.ndim != 1 or y.shape != scores.shape or y.size == 0:
@@ -56,7 +53,6 @@ def validate_inputs(y: np.ndarray, scores: np.ndarray) -> tuple[np.ndarray, np.n
 
 
 def count_at_threshold(y: np.ndarray, scores: np.ndarray, threshold: float) -> Confusion:
-    """Власний підрахунок TP/FP/FN/TN за правилом scores >= threshold."""
     y, scores = validate_inputs(y, scores)
     if np.isnan(threshold):
         raise ValueError("Поріг не може бути NaN.")
@@ -71,13 +67,6 @@ def count_at_threshold(y: np.ndarray, scores: np.ndarray, threshold: float) -> C
 
 
 def candidate_table(y: np.ndarray, scores: np.ndarray) -> pd.DataFrame:
-    """Кандидати за спаданням: +inf, усі унікальні scores.
-
-    На кінці групи рівних оцінок префікс уже містить усю групу.
-    Тому жоден кандидат не розділяє об'єкти з однаковою оцінкою.
-    Після сортування є лише лінійні векторні операції, без циклу
-    за кандидатами з повторним переглядом усіх прикладів.
-    """
     y, scores = validate_inputs(y, scores)
     order = np.argsort(-scores, kind="stable")
     sorted_scores = scores[order]
@@ -103,13 +92,11 @@ def candidate_table(y: np.ndarray, scores: np.ndarray) -> pd.DataFrame:
 
 
 def select_threshold(table: pd.DataFrame) -> float:
-    """Серед мінімізаторів C явно вибираємо найбільший поріг."""
     minimum = table["C"].min()
     return float(table.loc[table["C"] == minimum, "threshold"].max())
 
 
 def encode_threshold(threshold: float) -> float | str:
-    """У JSON немає стандартного числового значення Infinity."""
     return "inf" if np.isposinf(threshold) else float(threshold)
 
 

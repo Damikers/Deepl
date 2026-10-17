@@ -1,5 +1,3 @@
-"""Незалежний повільний еталон на малих наборах A, B, C з умови."""
-
 from __future__ import annotations
 
 import argparse
@@ -18,7 +16,6 @@ CASES = {
 
 
 def brute_force(y: np.ndarray, scores: np.ndarray) -> tuple[pd.DataFrame, float]:
-    """Не використовує таблицю, групування чи лічильники швидкого алгоритму."""
     candidates = [float("inf")] + sorted({float(s) for s in scores}, reverse=True)
     rows = []
     for threshold in candidates:
@@ -46,13 +43,11 @@ def run_checks(out: Path | None = None) -> dict[str, pd.DataFrame]:
         y, s = np.asarray(labels), np.asarray(scores, dtype=np.float64)
         fast = candidate_table(y, s)
         slow, slow_threshold = brute_force(y, s)
-        # Порівнюємо кожен поріг і кожен цілий лічильник без допусків.
         np.testing.assert_array_equal(fast["threshold"].to_numpy(), slow["threshold"].to_numpy())
         np.testing.assert_array_equal(fast[COLUMNS[1:]].to_numpy(), slow[COLUMNS[1:]].to_numpy())
         fast_threshold = select_threshold(fast)
         if fast_threshold != slow_threshold or fast_threshold != expected:
             raise AssertionError(f"Набір {name}: неправильний поріг або правило нічиєї.")
-        # Незалежність результату від початкового порядку, зокрема всередині ties.
         reversed_table = candidate_table(y[::-1], s[::-1])
         np.testing.assert_array_equal(fast.to_numpy(), reversed_table.to_numpy())
         comparison = fast.copy()
@@ -67,6 +62,6 @@ def run_checks(out: Path | None = None) -> dict[str, pd.DataFrame]:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description="Незалежний повільний еталон на малих наборах A, B, C з умови.")
     parser.add_argument("--out", type=Path, default=Path("results/checks"))
     run_checks(parser.parse_args().out)

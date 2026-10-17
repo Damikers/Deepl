@@ -1,5 +1,3 @@
-"""Перевірки аналізу без навчання та незмінності готового README."""
-
 from __future__ import annotations
 
 from contextlib import chdir, redirect_stdout
@@ -46,7 +44,6 @@ class AnalysisTests(unittest.TestCase):
         before = {p: sha256(p.read_bytes()).hexdigest() for p in saved.rglob("*") if p.is_file()}
         report = (PROJECT / "README.md").read_bytes()
         report_mtime = (PROJECT / "README.md").stat().st_mtime_ns
-        # Пробіли й /tmp перевіряють запуск з іншої теки на macOS.
         with tempfile.TemporaryDirectory(prefix="sgn analysis with spaces ", dir="/tmp") as temporary:
             directory = Path(temporary)
             (directory / "README.md").write_bytes(report)

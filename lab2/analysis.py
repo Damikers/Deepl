@@ -1,5 +1,3 @@
-"""Пункти 2–4: аналіз збережених прогнозів без CSV і повторного навчання."""
-
 from __future__ import annotations
 
 import argparse
@@ -8,7 +6,6 @@ import json
 import os
 from pathlib import Path
 
-# Локальний кеш шрифтів: працює й без доступу на запис до домашньої теки.
 os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parent / ".uv-cache/matplotlib"))
 os.environ.setdefault("XDG_CACHE_HOME", str(Path(__file__).resolve().parent / ".uv-cache"))
 import matplotlib
@@ -35,7 +32,6 @@ def write_json(path: Path, data: dict) -> None:
 
 
 def save_csv(frame: pd.DataFrame, path: Path) -> None:
-    # 17 значущих цифр достатньо для round-trip float64. Перед s >= t не округлюємо.
     frame.to_csv(path, index=False, float_format="%.17g")
 
 
@@ -83,7 +79,6 @@ def draw_curves(y: np.ndarray, scores: np.ndarray, threshold: float, out: Path) 
 
 
 def error_examples(y: np.ndarray, scores: np.ndarray, amounts: np.ndarray, row_ids: np.ndarray, threshold: float) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Перші п'ять КОЖНОГО типу за первинним row_id, не за оцінкою."""
     y, scores = validate_inputs(y, scores)
     predicted = scores >= threshold
     finite_threshold = bool(np.isfinite(threshold))
@@ -102,7 +97,6 @@ def error_examples(y: np.ndarray, scores: np.ndarray, amounts: np.ndarray, row_i
                 "score_minus_threshold": float(scores[i]) - threshold if finite_threshold else None,
                 "distance_to_threshold": abs(float(scores[i]) - threshold) if finite_threshold else None,
             })
-        # Для порога +inf середні нескінченні відстані не обчислюємо.
         distances = np.abs(scores[positions] - threshold) if finite_threshold else np.array([])
         summaries.append({
             "error_type": kind,
@@ -123,7 +117,6 @@ def analyze(saved: Path, out: Path) -> None:
         raise FileNotFoundError(f"Немає збережених прогнозів: {saved / 'predictions.npz'}")
     out.mkdir(parents=True, exist_ok=True)
 
-    # Жодної тестової метрики до проходження всіх перевірок.
     run_checks(out / "checks")
     with np.load(saved / "predictions.npz", allow_pickle=False) as archive:
         y_validation = archive["validation_y"]
@@ -140,7 +133,6 @@ def analyze(saved: Path, out: Path) -> None:
     save_csv(validation_summary, out / "validation_summary.csv")
     auc = draw_curves(y_validation, s_validation, threshold, out)
 
-    # Фіксуємо поріг на диску ДО першого звернення до test, потім читаємо саме його.
     frozen = {
         "threshold": encode_threshold(threshold),
         "selection_split": "validation",
@@ -197,7 +189,7 @@ def analyze(saved: Path, out: Path) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description="Пункти 2–4: аналіз збережених прогнозів без CSV і повторного навчання.")
     parser.add_argument("--saved", type=Path, default=Path("results"))
     parser.add_argument("--out", type=Path, default=Path("reproduced"), help="Тека для результатів аналізу (типово reproduced).")
     args = parser.parse_args()
