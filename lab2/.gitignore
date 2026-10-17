@@ -1,0 +1,11 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+data/
+creditcard.csv
+reproduced/
+results_retrained/
+analysis_retrained/
+checks_reproduced/

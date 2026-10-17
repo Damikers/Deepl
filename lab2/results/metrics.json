@@ -1,0 +1,33 @@
+{
+  "threshold": 0.031193915754556656,
+  "validation_roc_auc": 0.9733177163730801,
+  "candidate_count": 55989,
+  "validation": {
+    "TP": 82,
+    "FP": 34,
+    "FN": 16,
+    "TN": 56829,
+    "C": 194,
+    "precision": 0.7068965517241379,
+    "recall": 0.8367346938775511
+  },
+  "test": {
+    "TP": 80,
+    "FP": 43,
+    "FN": 19,
+    "TN": 56820,
+    "C": 233,
+    "precision": 0.6504065040650406,
+    "recall": 0.8080808080808081
+  },
+  "test_baseline_0_5": {
+    "TP": 71,
+    "FP": 8,
+    "FN": 28,
+    "TN": 56855,
+    "C": 288,
+    "precision": 0.8987341772151899,
+    "recall": 0.7171717171717171
+  },
+  "predictions_sha256": "c6c91760100b976ea2adca6ddf81c4634c7af8ebf4f160d633886630ce9d4a59"
+}

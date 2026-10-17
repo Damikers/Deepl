@@ -1,0 +1,17 @@
+{
+  "threshold": 0.031193915754556656,
+  "selection_split": "validation",
+  "prediction_rule": "score >= threshold",
+  "cost": {
+    "FN": 10,
+    "FP": 1
+  },
+  "tie_break": "largest threshold among minimum-cost candidates",
+  "candidate_count": 55989,
+  "validation_fingerprint_sha256": "ab59d8bbf80389df0ee72efa0ac1ad71b0a67e35f40b423a55bcd72a1cf43c29",
+  "checks_passed": [
+    "A",
+    "B",
+    "C"
+  ]
+}

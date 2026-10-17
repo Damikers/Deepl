@@ -1,0 +1,16 @@
+[project]
+name = "sgn-lab2-decision-threshold"
+version = "0.1.0"
+description = "ЛР2: вибір порога рішення за асиметричною ціною помилок"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==2.3.3",
+    "pandas==2.3.3",
+    "scikit-learn==1.7.2",
+    "torch==2.8.0",
+    "matplotlib==3.10.6",
+]
+
+[tool.uv]
+package = false

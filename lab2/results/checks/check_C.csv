@@ -1,0 +1,5 @@
+threshold,TP,FP,FN,TN,C,direct_TP,direct_FP,direct_FN,direct_TN,direct_C,exact_match
+inf,0,0,2,11,20,0,0,2,11,20,True
+0.80000000000000004,1,0,1,11,10,1,0,1,11,10,True
+0.5,2,10,0,1,10,2,10,0,1,10,True
+0.20000000000000001,2,11,0,0,11,2,11,0,0,11,True
