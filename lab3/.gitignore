@@ -1,0 +1,14 @@
+.venv/
+.uv-cache/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+data/
+.checkpoints/
+reproduced/
+reproduced_run*/
+experiment_retrained/
+experiment_run*/
+analysis_run*/
+*.log

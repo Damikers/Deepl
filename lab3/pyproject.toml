@@ -1,0 +1,17 @@
+[project]
+name = "sgn-lab3-transfer-learning"
+version = "0.1.0"
+description = "ЛР3: обчислювальний експеримент і трансферне навчання ResNet-18"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==2.3.3",
+    "scikit-learn==1.7.2",
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "matplotlib==3.10.6",
+    "pillow==11.3.0",
+]
+
+[tool.uv]
+package = false

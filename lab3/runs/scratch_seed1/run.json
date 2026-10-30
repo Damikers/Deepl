@@ -1,0 +1,270 @@
+{
+  "regime": "scratch",
+  "seed": 1,
+  "split_sha256": "b29c53c7e41b0c4bb36e54d8ca3a9bcbac11eca96abeab8ba4fbcf5937a160b8",
+  "git_commit": null,
+  "git_dirty": null,
+  "git_status": "not_a_git_repository",
+  "source_sha256": "e0b3c77ddd586cafbe43751dc4a38696ac78dc81cc274e89b3129a7801853350",
+  "source_files_sha256": {
+    "checks.py": "6205bfcfe6623c64da7f6b2a70ed0dcaf901492d35d9a42d8c2c271b388f4539",
+    "common.py": "9d5e0d7e461569bf4e70c3a6731e39db4d87e0dcb81b7a26c753c751d51594f3",
+    "data.py": "4e94ccd7f7cc90b16c61daacbe404a0c355d2c02323dd0e3abb9d3cf1c588e6f",
+    "download_data.py": "287b0a92d0c654c6768aac3d114d67e39a01feeafc3d26d4bec8a63871b7bc58",
+    "models.py": "4c6aec4cf1dc9e9c6435ee72de30982cdc66e6806f9737678214b41594021f6c",
+    "protocol.py": "685f09b3da8d6d2db48043f6cfd0fe827529d4cb0bd44e2c1a92e03121dfc5c7",
+    "pyproject.toml": "b4614164179a6728b7d8d5206c4bc32fa996f9f1f1f206cdc11d31e857bc13e5",
+    "train.py": "278c610eb5edf3ae1828b5e20e6dc06534542b5921db6fbc57107306e9387182",
+    "uv.lock": "c64744f1bae9f67e57a42ee85e85c82a4b71fe154a72276310b70356dd94ba79"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "pillow": "11.3.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "device": "mps",
+    "device_name": "Apple M2 / Metal Performance Shaders",
+    "torch_num_threads": 4
+  },
+  "settings": {
+    "classes": [
+      "buildings",
+      "forest",
+      "glacier",
+      "mountain",
+      "sea",
+      "street"
+    ],
+    "img_size": 160,
+    "dtype": "float32",
+    "architecture": "torchvision.models.resnet18; fc=Linear(512,6,bias=True)",
+    "initialization_order": [
+      "torch.manual_seed(seed)",
+      "np.random.seed(seed)",
+      "resnet18(weights=W)",
+      "fc=Linear(512,6)",
+      "requires_grad",
+      "to(device,float32)",
+      "AdamW"
+    ],
+    "weights": null,
+    "linear_initialization": "torch.nn.Linear default reset_parameters",
+    "resnet_defaults": {
+      "zero_init_residual": false,
+      "groups": 1,
+      "width_per_group": 64,
+      "replace_stride_with_dilation": [
+        false,
+        false,
+        false
+      ],
+      "norm_layer": "BatchNorm2d"
+    },
+    "batchnorm": {
+      "momentum": 0.1,
+      "eps": 1e-05,
+      "affine": true,
+      "track_running_stats": true
+    },
+    "transforms": {
+      "train_repr": "Compose(\n    RandomResizedCrop(size=(160, 160), scale=(0.7, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+      "eval_repr": "Compose(\n    Resize(size=(160, 160), interpolation=bilinear, max_size=None, antialias=True)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+      "open": "Pillow.Image.open(...).convert('RGB')",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "random_resized_crop": {
+        "size": [
+          160,
+          160
+        ],
+        "scale": [
+          0.7,
+          1.0
+        ],
+        "ratio": [
+          0.75,
+          1.3333333333333333
+        ],
+        "interpolation": "BILINEAR",
+        "antialias": true
+      },
+      "random_horizontal_flip_p": 0.5,
+      "eval_resize": {
+        "size": [
+          160,
+          160
+        ],
+        "interpolation": "BILINEAR",
+        "max_size": null,
+        "antialias": true
+      },
+      "to_tensor": "uint8 [0,255] -> float32 [0,1]",
+      "normalize_inplace": false
+    },
+    "loaders": {
+      "train": {
+        "batch_size": 32,
+        "shuffle": true,
+        "drop_last": false,
+        "num_workers": 0
+      },
+      "validation_test": {
+        "batch_size": 64,
+        "shuffle": false,
+        "drop_last": false,
+        "num_workers": 0
+      },
+      "generator": null,
+      "sampler": "default",
+      "pin_memory": false,
+      "persistent_workers": false,
+      "timeout": 0,
+      "worker_init_fn": null,
+      "prefetch_factor": null,
+      "in_order": true
+    },
+    "epochs": 8,
+    "steps_per_epoch": 38,
+    "total_optimizer_steps": 304,
+    "criterion": {
+      "name": "CrossEntropyLoss",
+      "weight": null,
+      "ignore_index": -100,
+      "reduction": "mean",
+      "label_smoothing": 0.0
+    },
+    "optimizer": {
+      "name": "AdamW",
+      "defaults": {
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0001,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      },
+      "groups": [
+        {
+          "name": "all",
+          "numel": 11179590,
+          "lr": 0.003,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0001,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "decoupled_weight_decay": true
+        }
+      ]
+    },
+    "zero_grad_set_to_none": true,
+    "validation_metric": "macro-F1; labels=0..5; zero_division=0",
+    "epoch_loss": "sum(batch_mean_loss * actual_batch_size) / 1200; before optimizer.step",
+    "scheduler": null,
+    "gradient_clipping": null,
+    "mixed_precision": false,
+    "class_weighting": false,
+    "early_stopping": false,
+    "checkpoint_epoch": 8,
+    "test_time_augmentation": false,
+    "deterministic_algorithms": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.5988051064809163,
+      "validation_macro_f1": 0.4206183700679768,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2596272897720338,
+      "validation_macro_f1": 0.4593198945642678,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2032690652211506,
+      "validation_macro_f1": 0.47376661052248625,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.137142322063446,
+      "validation_macro_f1": 0.5715069617707629,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1094222680727641,
+      "validation_macro_f1": 0.5349801139081204,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.0573322916030883,
+      "validation_macro_f1": 0.2918019407906676,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.0718807061513265,
+      "validation_macro_f1": 0.5528400321928436,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.0026651271184286,
+      "validation_macro_f1": 0.44499777741084795,
+      "optimizer_steps": 38,
+      "images": 1200,
+      "last_batch_size": 16
+    }
+  ],
+  "timing_scope": "8 training epochs plus validation after every epoch; excludes setup/checks/serialization",
+  "training_seconds": 83.85619104199577,
+  "val_logits_sha256": "838c7ca1ee4901811ef53b428559c5de180aaede85008e83052550576b784229",
+  "checkpoint_sha256": "dad831c617ef72af6a266d92938e2b5a0f3dc00cf88b2c427f614f3301fa7ab0"
+}

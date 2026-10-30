@@ -1,0 +1,207 @@
+{
+  "split_sha256": "b29c53c7e41b0c4bb36e54d8ca3a9bcbac11eca96abeab8ba4fbcf5937a160b8",
+  "model_sha256": "a0b7fc220c5365120ae75792ba2cccd9b2c3a4e4cd399961d2de9f678113b61d",
+  "runs": [
+    {
+      "run": 1,
+      "regime": "scratch",
+      "seed": 1,
+      "train_loss_epoch8": 1.0026651271184286,
+      "validation_macro_f1_epoch8": 0.44499777741084795,
+      "training_seconds": 83.85619104199577
+    },
+    {
+      "run": 2,
+      "regime": "frozen",
+      "seed": 1,
+      "train_loss_epoch8": 0.16545249203840892,
+      "validation_macro_f1_epoch8": 0.8842012435043274,
+      "training_seconds": 51.63704662499367
+    },
+    {
+      "run": 3,
+      "regime": "frozen",
+      "seed": 2,
+      "train_loss_epoch8": 0.17565550565719604,
+      "validation_macro_f1_epoch8": 0.8785003294351141,
+      "training_seconds": 60.82362066699716
+    },
+    {
+      "run": 4,
+      "regime": "frozen",
+      "seed": 3,
+      "train_loss_epoch8": 0.1895831702152888,
+      "validation_macro_f1_epoch8": 0.8885955696095422,
+      "training_seconds": 60.39178787499259
+    },
+    {
+      "run": 5,
+      "regime": "unfreeze",
+      "seed": 1,
+      "train_loss_epoch8": 0.06436972868007919,
+      "validation_macro_f1_epoch8": 0.873136971231172,
+      "training_seconds": 51.194543166988296
+    },
+    {
+      "run": 6,
+      "regime": "unfreeze",
+      "seed": 2,
+      "train_loss_epoch8": 0.09301304131746292,
+      "validation_macro_f1_epoch8": 0.8763914765549901,
+      "training_seconds": 48.46641154200188
+    },
+    {
+      "run": 7,
+      "regime": "unfreeze",
+      "seed": 3,
+      "train_loss_epoch8": 0.13682524954279263,
+      "validation_macro_f1_epoch8": 0.9026607876004796,
+      "training_seconds": 48.799569291993976
+    }
+  ],
+  "effects": {
+    "means": {
+      "scratch": 0.44499777741084795,
+      "frozen": 0.8837657141829945,
+      "unfreeze": 0.8840630784622139
+    },
+    "ranges": {
+      "frozen": 0.010095240174428088,
+      "unfreeze": 0.029523816369307676
+    },
+    "R": 0.029523816369307676,
+    "delta_pre": 0.4387679367721466,
+    "delta_unf": 0.0002973642792193365,
+    "total_gain": 0.43906530105136593,
+    "pre_exceeds_noise": true,
+    "unf_exceeds_noise": false
+  },
+  "selected": {
+    "regime": "unfreeze",
+    "seed": 3,
+    "validation_macro_f1": 0.9026607876004796,
+    "regime_mean": 0.8840630784622139,
+    "selection_uses": "validation_epoch8_only"
+  },
+  "test": {
+    "macro_f1": 0.8980756014866637,
+    "accuracy": 0.8968042609853528,
+    "n": 1502,
+    "correct": 1347,
+    "errors": 155,
+    "accuracy_standard_error": 0.00784954977903832,
+    "test_minus_validation_macro_f1": -0.0045851861138159755,
+    "confusion_matrix": [
+      [
+        184,
+        1,
+        1,
+        0,
+        1,
+        32
+      ],
+      [
+        0,
+        236,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        210,
+        53,
+        10,
+        1
+      ],
+      [
+        0,
+        0,
+        25,
+        234,
+        4,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        5,
+        246,
+        1
+      ],
+      [
+        12,
+        1,
+        1,
+        0,
+        0,
+        237
+      ]
+    ],
+    "classes": [
+      "buildings",
+      "forest",
+      "glacier",
+      "mountain",
+      "sea",
+      "street"
+    ]
+  },
+  "error_examples": [
+    {
+      "file": "20202.jpg",
+      "true_class": "glacier",
+      "predicted_class": "mountain",
+      "predicted_probability": 0.8933736681938171,
+      "pair_count": 53,
+      "test_index": 642
+    },
+    {
+      "file": "20083.jpg",
+      "true_class": "buildings",
+      "predicted_class": "street",
+      "predicted_probability": 0.5446123480796814,
+      "pair_count": 32,
+      "test_index": 205
+    },
+    {
+      "file": "20093.jpg",
+      "true_class": "mountain",
+      "predicted_class": "glacier",
+      "predicted_probability": 0.833163321018219,
+      "pair_count": 25,
+      "test_index": 807
+    },
+    {
+      "file": "20737.jpg",
+      "true_class": "street",
+      "predicted_class": "buildings",
+      "predicted_probability": 0.9018679857254028,
+      "pair_count": 12,
+      "test_index": 1398
+    },
+    {
+      "file": "20383.jpg",
+      "true_class": "glacier",
+      "predicted_class": "sea",
+      "predicted_probability": 0.7116857171058655,
+      "pair_count": 10,
+      "test_index": 524
+    }
+  ],
+  "evaluation_environment": {
+    "python": "3.12.2",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "pillow": "11.3.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "device": "cpu",
+    "device_name": "cpu",
+    "torch_num_threads": 4
+  }
+}

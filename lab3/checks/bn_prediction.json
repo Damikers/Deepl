@@ -1,0 +1,3 @@
+{
+  "prediction_before_experiment": "Якщо frozen викликати лише model.train(), параметри кістяка не зміняться, бо requires_grad=False, але running_mean, running_var і num_batches_tracked BatchNorm зміняться. Навчатиметься fc. Крива train loss не є перевіркою заморожування: втрата може спадати і за такої помилки."
+}

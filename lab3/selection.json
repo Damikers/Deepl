@@ -1,0 +1,9 @@
+{
+  "regime": "unfreeze",
+  "seed": 3,
+  "validation_macro_f1": 0.9026607876004796,
+  "regime_mean": 0.8840630784622139,
+  "selection_uses": "validation_epoch8_only",
+  "model_sha256": "a0b7fc220c5365120ae75792ba2cccd9b2c3a4e4cd399961d2de9f678113b61d",
+  "split_sha256": "b29c53c7e41b0c4bb36e54d8ca3a9bcbac11eca96abeab8ba4fbcf5937a160b8"
+}
