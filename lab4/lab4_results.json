@@ -1,0 +1,2677 @@
+{
+  "completed_at_utc": "2026-11-22T22:17:37.459841+00:00",
+  "environment": {
+    "cpu": "Apple M2",
+    "operating_system": "macOS-26.6.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.2",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "onnx": "1.19.1",
+    "onnxruntime": "1.23.2",
+    "numpy": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "pillow": "11.3.0",
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "intra_op_num_threads": 1,
+    "inter_op_num_threads": 1,
+    "graph_optimization_level": "GraphOptimizationLevel.ORT_ENABLE_ALL",
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 1,
+    "cpu_features": {
+      "FEAT_DotProd": "1",
+      "FEAT_I8MM": "1"
+    }
+  },
+  "model": {
+    "path": "/Users/damik/Desktop/КПІ/4 Курс/Перший семестр/СГН/lab3/lab3_model.pt",
+    "sha256": "a0b7fc220c5365120ae75792ba2cccd9b2c3a4e4cd399961d2de9f678113b61d",
+    "regime": "unfreeze",
+    "seed": 3,
+    "classes": [
+      "buildings",
+      "forest",
+      "glacier",
+      "mountain",
+      "sea",
+      "street"
+    ],
+    "img_size": 160
+  },
+  "data": {
+    "split_path": "/Users/damik/Desktop/КПІ/4 Курс/Перший семестр/СГН/lab3/split.csv",
+    "split_sha256": "b29c53c7e41b0c4bb36e54d8ca3a9bcbac11eca96abeab8ba4fbcf5937a160b8",
+    "data_root": "/Users/damik/Desktop/КПІ/4 Курс/Перший семестр/СГН/lab3/data",
+    "split_control": {
+      "train": {
+        "count": 1200,
+        "filename_sum": 11993084,
+        "class_counts": {
+          "buildings": 200,
+          "forest": 200,
+          "glacier": 200,
+          "mountain": 200,
+          "sea": 200,
+          "street": 200
+        }
+      },
+      "test": {
+        "count": 1502,
+        "filename_sum": 33351444,
+        "class_counts": {
+          "buildings": 219,
+          "forest": 237,
+          "glacier": 277,
+          "mountain": 263,
+          "sea": 255,
+          "street": 251
+        }
+      }
+    },
+    "calibration": {
+      "count": 200,
+      "filename_sum": 1921470,
+      "class_counts": {
+        "buildings": 40,
+        "forest": 35,
+        "glacier": 36,
+        "mountain": 33,
+        "sea": 29,
+        "street": 27
+      },
+      "selection": "train sorted by filename strings, default_rng(0).permutation(1200)[:200]",
+      "indices": [
+        919,
+        564,
+        1108,
+        160,
+        576,
+        794,
+        166,
+        994,
+        516,
+        523,
+        566,
+        149,
+        164,
+        749,
+        206,
+        446,
+        766,
+        1082,
+        382,
+        274,
+        189,
+        930,
+        118,
+        1091,
+        1081,
+        956,
+        799,
+        992,
+        1106,
+        694,
+        684,
+        56,
+        575,
+        117,
+        1084,
+        321,
+        90,
+        49,
+        400,
+        825,
+        433,
+        213,
+        2,
+        713,
+        422,
+        615,
+        691,
+        635,
+        1100,
+        1041,
+        990,
+        1175,
+        212,
+        109,
+        420,
+        53,
+        421,
+        716,
+        269,
+        878,
+        1185,
+        445,
+        958,
+        558,
+        365,
+        756,
+        1195,
+        340,
+        652,
+        199,
+        124,
+        758,
+        729,
+        475,
+        281,
+        720,
+        1165,
+        515,
+        77,
+        654,
+        1021,
+        531,
+        1030,
+        737,
+        130,
+        360,
+        264,
+        597,
+        1104,
+        774,
+        728,
+        220,
+        1153,
+        934,
+        712,
+        345,
+        1128,
+        968,
+        253,
+        423,
+        596,
+        126,
+        369,
+        436,
+        36,
+        752,
+        1164,
+        493,
+        727,
+        234,
+        1125,
+        947,
+        964,
+        725,
+        580,
+        245,
+        610,
+        901,
+        916,
+        769,
+        208,
+        237,
+        425,
+        831,
+        1120,
+        895,
+        609,
+        882,
+        634,
+        459,
+        664,
+        1199,
+        386,
+        98,
+        330,
+        452,
+        1000,
+        258,
+        449,
+        1002,
+        500,
+        1119,
+        1077,
+        1023,
+        37,
+        847,
+        1085,
+        948,
+        485,
+        144,
+        517,
+        381,
+        816,
+        5,
+        629,
+        1032,
+        25,
+        1130,
+        64,
+        957,
+        1060,
+        437,
+        454,
+        801,
+        605,
+        21,
+        982,
+        280,
+        74,
+        715,
+        812,
+        827,
+        986,
+        858,
+        251,
+        186,
+        911,
+        1127,
+        1086,
+        270,
+        935,
+        888,
+        721,
+        432,
+        244,
+        672,
+        969,
+        789,
+        273,
+        69,
+        67,
+        611,
+        879,
+        922,
+        1133,
+        622,
+        388,
+        665,
+        678,
+        733
+      ],
+      "rows": [
+        {
+          "file": "5521.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "18238.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "8634.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "12570.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "18419.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "3561.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "12727.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "6801.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "17611.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "17712.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "18266.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "12426.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "12679.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "3104.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "13304.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "16620.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "3284.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "8208.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "15827.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "14256.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "13054.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "5616.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "11934.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "8340.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "8204.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "6123.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "3649.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "6763.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "8563.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "2232.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "2108.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "1094.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "18380.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "11910.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "8216.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "14931.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "11466.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "10796.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "16065.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "4075.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "16426.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "13347.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "1001.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "2531.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "16309.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "19036.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "2179.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "19412.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "8460.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "7599.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "6747.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "9601.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "13338.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "11764.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "16296.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "10831.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "16307.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "2566.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "14202.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "4958.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "9714.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "16600.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "6197.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "1818.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "1555.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "3188.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "9910.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "15261.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "19703.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "13185.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "12003.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "3210.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "2729.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "17085.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "1437.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "2578.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "9432.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "17600.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "1128.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "19778.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "7284.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "17786.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "7431.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "2929.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "12117.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "15477.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "14136.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "187.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "8481.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "3337.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "2710.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "13538.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "9256.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "5705.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "2486.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "153.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "8854.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "6268.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "1396.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "16316.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "18679.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "12046.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "15615.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "16453.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "10575.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "3143.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "9408.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "17287.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "2697.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "13775.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "8830.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "5908.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "6242.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "2648.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "1844.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "13860.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "18963.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "5202.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "5477.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "3307.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "13322.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "13793.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "16334.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "416.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "8819.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "5136.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "18922.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "5033.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "19389.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "16752.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "19872.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "997.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "15885.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "11629.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "1514.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "16681.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "6883.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "14022.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "16661.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "690.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "17370.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "8818.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "8169.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "7311.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "1058.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "4571.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "8231.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "5937.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "17178.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "1236.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "17624.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "15784.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "3964.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "10036.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "1926.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "7445.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "10355.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "8884.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "11143.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "6152.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "7955.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "16470.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "16717.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "3680.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "18838.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "10281.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "6569.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "14349.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "11253.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "2562.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "390.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "4090.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "6600.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "4803.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "13943.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "12963.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "5341.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "8847.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "8256.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "14216.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "5716.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "5082.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "2600.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "1642.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "13843.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "20026.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "6307.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "3538.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "14245.jpg",
+          "label": "mountain",
+          "part": "train"
+        },
+        {
+          "file": "11190.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "11160.jpg",
+          "label": "sea",
+          "part": "train"
+        },
+        {
+          "file": "18965.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "4967.jpg",
+          "label": "glacier",
+          "part": "train"
+        },
+        {
+          "file": "5563.jpg",
+          "label": "buildings",
+          "part": "train"
+        },
+        {
+          "file": "8919.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "19192.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "1590.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "19905.jpg",
+          "label": "street",
+          "part": "train"
+        },
+        {
+          "file": "2032.jpg",
+          "label": "forest",
+          "part": "train"
+        },
+        {
+          "file": "2809.jpg",
+          "label": "buildings",
+          "part": "train"
+        }
+      ]
+    },
+    "test_order": "test rows in split.csv order",
+    "transform": {
+      "resize": [
+        160,
+        160
+      ],
+      "interpolation": "bilinear",
+      "antialias": true,
+      "rgb": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "dtype": "float32"
+    }
+  },
+  "export": {
+    "seconds": 0.42548533296212554,
+    "opset_version": 17,
+    "dynamo": false,
+    "input_name": "input",
+    "output_name": "logits",
+    "dynamic_batch": true,
+    "conv_nodes": 20,
+    "batch_normalization_nodes": 0,
+    "node_counts": {
+      "Add": 8,
+      "Conv": 20,
+      "Flatten": 1,
+      "Gemm": 1,
+      "GlobalAveragePool": 1,
+      "MaxPool": 1,
+      "Relu": 17
+    }
+  },
+  "export_equivalence": {
+    "maximum_absolute_logit_difference": 6.67572021484375e-05,
+    "prediction_agreement": 1.0,
+    "pytorch_macro_f1": 0.8980756014866637,
+    "onnx_fp32_macro_f1": 0.8980756014866637,
+    "test_images": 1502,
+    "batch_size": 64,
+    "torch_no_grad": true,
+    "lab3_test_macro_f1": 0.8980756014866637,
+    "matches_lab3": true
+  },
+  "preprocessing": {
+    "seconds": 0.9487624999601394,
+    "skip_symbolic_shape": true
+  },
+  "quantization": {
+    "int8": {
+      "seconds": 3.664358166977763,
+      "quant_format": "QDQ",
+      "activation_type": "QUInt8",
+      "weight_type": "QInt8",
+      "per_channel": true,
+      "calibrate_method": "MinMax",
+      "calibration_batch_size": 1,
+      "calibration_images": 200,
+      "other_arguments": "defaults"
+    },
+    "int8_per_tensor": {
+      "seconds": 3.078279416076839,
+      "quant_format": "QDQ",
+      "activation_type": "QUInt8",
+      "weight_type": "QInt8",
+      "per_channel": false,
+      "calibrate_method": "MinMax",
+      "calibration_batch_size": 1,
+      "calibration_images": 200,
+      "other_arguments": "defaults"
+    }
+  },
+  "quality": {
+    "fp32": {
+      "n": 1502,
+      "correct": 1347,
+      "macro_f1": 0.8980756014866637,
+      "accuracy": 0.8968042609853528,
+      "agreement_with_fp32": 1.0,
+      "changed_predictions": 0,
+      "changed_both_wrong": 0,
+      "b": 0,
+      "c": 0,
+      "delta_accuracy": 0.0,
+      "paired_standard_error": 0.0,
+      "single_model_standard_error": 0.00784954977903832,
+      "accuracy_change_exceeds_noise": false,
+      "accuracy_change_direction": "unchanged",
+      "confusion_matrix": [
+        [
+          184,
+          1,
+          1,
+          0,
+          1,
+          32
+        ],
+        [
+          0,
+          236,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          210,
+          53,
+          10,
+          1
+        ],
+        [
+          0,
+          0,
+          25,
+          234,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          5,
+          246,
+          1
+        ],
+        [
+          12,
+          1,
+          1,
+          0,
+          0,
+          237
+        ]
+      ],
+      "delta_macro_f1": 0.0,
+      "fp32_single_se_over_paired_se": null
+    },
+    "int8": {
+      "n": 1502,
+      "correct": 1348,
+      "macro_f1": 0.8989867859107439,
+      "accuracy": 0.8974700399467377,
+      "agreement_with_fp32": 0.9906790945406125,
+      "changed_predictions": 14,
+      "changed_both_wrong": 3,
+      "b": 6,
+      "c": 5,
+      "delta_accuracy": 0.0006657789613848203,
+      "paired_standard_error": 0.002208139008225965,
+      "single_model_standard_error": 0.00782709144037157,
+      "accuracy_change_exceeds_noise": false,
+      "accuracy_change_direction": "increase",
+      "confusion_matrix": [
+        [
+          186,
+          1,
+          1,
+          0,
+          1,
+          30
+        ],
+        [
+          0,
+          236,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          209,
+          56,
+          7,
+          1
+        ],
+        [
+          0,
+          0,
+          25,
+          234,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          5,
+          246,
+          1
+        ],
+        [
+          12,
+          1,
+          1,
+          0,
+          0,
+          237
+        ]
+      ],
+      "delta_macro_f1": 0.0009111844240802247,
+      "fp32_single_se_over_paired_se": 3.5548259189283136
+    },
+    "int8_per_tensor": {
+      "n": 1502,
+      "correct": 1340,
+      "macro_f1": 0.8933776191824762,
+      "accuracy": 0.8921438082556591,
+      "agreement_with_fp32": 0.9840213049267643,
+      "changed_predictions": 24,
+      "changed_both_wrong": 1,
+      "b": 8,
+      "c": 15,
+      "delta_accuracy": -0.004660452729693742,
+      "paired_standard_error": 0.0031929637305677223,
+      "single_model_standard_error": 0.008003961803908197,
+      "accuracy_change_exceeds_noise": false,
+      "accuracy_change_direction": "decrease",
+      "confusion_matrix": [
+        [
+          183,
+          1,
+          1,
+          0,
+          2,
+          32
+        ],
+        [
+          0,
+          235,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          203,
+          59,
+          10,
+          1
+        ],
+        [
+          0,
+          1,
+          24,
+          235,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          5,
+          246,
+          1
+        ],
+        [
+          11,
+          1,
+          1,
+          0,
+          0,
+          238
+        ]
+      ],
+      "delta_macro_f1": -0.004697982304187498,
+      "fp32_single_se_over_paired_se": 2.4583898977276006
+    }
+  },
+  "channel_ranges": {
+    "convolutions": [
+      {
+        "name": "/conv1/Conv",
+        "weight_name": "onnx::Conv_193",
+        "weight_shape": [
+          64,
+          3,
+          7,
+          7
+        ],
+        "alpha_min": 1.3656694420889192e-14,
+        "alpha_median": 0.05906644091010094,
+        "alpha_max": 0.39387544989585876,
+        "r": 6.668345744673135,
+        "median_channel_bits_lost": 2.737328908042681
+      },
+      {
+        "name": "/layer1/layer1.0/conv1/Conv",
+        "weight_name": "onnx::Conv_196",
+        "weight_shape": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "alpha_min": 0.051017437130212784,
+        "alpha_median": 0.18416180461645126,
+        "alpha_max": 0.3745041489601135,
+        "r": 2.0335603777345854,
+        "median_channel_bits_lost": 1.0240078259931253
+      },
+      {
+        "name": "/layer1/layer1.0/conv2/Conv",
+        "weight_name": "onnx::Conv_199",
+        "weight_shape": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "alpha_min": 0.07970856130123138,
+        "alpha_median": 0.2639232873916626,
+        "alpha_max": 0.7707811594009399,
+        "r": 2.9204742295328394,
+        "median_channel_bits_lost": 1.546202654394427
+      },
+      {
+        "name": "/layer1/layer1.1/conv1/Conv",
+        "weight_name": "onnx::Conv_202",
+        "weight_shape": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "alpha_min": 0.0664157122373581,
+        "alpha_median": 0.1290033906698227,
+        "alpha_max": 0.2799574136734009,
+        "r": 2.1701554681608095,
+        "median_channel_bits_lost": 1.1177983998634575
+      },
+      {
+        "name": "/layer1/layer1.1/conv2/Conv",
+        "weight_name": "onnx::Conv_205",
+        "weight_shape": [
+          64,
+          64,
+          3,
+          3
+        ],
+        "alpha_min": 0.05645659565925598,
+        "alpha_median": 0.34788036346435547,
+        "alpha_max": 1.0473909378051758,
+        "r": 3.010779129281017,
+        "median_channel_bits_lost": 1.5901368758544485
+      },
+      {
+        "name": "/layer2/layer2.0/conv1/Conv",
+        "weight_name": "onnx::Conv_208",
+        "weight_shape": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "alpha_min": 0.04130551591515541,
+        "alpha_median": 0.08284527063369751,
+        "alpha_max": 0.21269579231739044,
+        "r": 2.5673860522205345,
+        "median_channel_bits_lost": 1.360300247120145
+      },
+      {
+        "name": "/layer2/layer2.0/conv2/Conv",
+        "weight_name": "onnx::Conv_211",
+        "weight_shape": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "alpha_min": 0.0765783041715622,
+        "alpha_median": 0.23962803184986115,
+        "alpha_max": 0.7241502404212952,
+        "r": 3.0219763306949465,
+        "median_channel_bits_lost": 1.5954923607930298
+      },
+      {
+        "name": "/layer2/layer2.0/downsample/downsample.0/Conv",
+        "weight_name": "onnx::Conv_214",
+        "weight_shape": [
+          128,
+          64,
+          1,
+          1
+        ],
+        "alpha_min": 0.002792598679661751,
+        "alpha_median": 0.1574157103896141,
+        "alpha_max": 0.6922507882118225,
+        "r": 4.397596570878833,
+        "median_channel_bits_lost": 2.1367152595160475
+      },
+      {
+        "name": "/layer2/layer2.1/conv1/Conv",
+        "weight_name": "onnx::Conv_217",
+        "weight_shape": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "alpha_min": 0.049962230026721954,
+        "alpha_median": 0.13856086134910583,
+        "alpha_max": 0.3110506236553192,
+        "r": 2.2448664119633555,
+        "median_channel_bits_lost": 1.1666295952861143
+      },
+      {
+        "name": "/layer2/layer2.1/conv2/Conv",
+        "weight_name": "onnx::Conv_220",
+        "weight_shape": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "alpha_min": 0.03878423571586609,
+        "alpha_median": 0.21488099545240402,
+        "alpha_max": 0.8770784139633179,
+        "r": 4.08169373990819,
+        "median_channel_bits_lost": 2.029167937272283
+      },
+      {
+        "name": "/layer3/layer3.0/conv1/Conv",
+        "weight_name": "onnx::Conv_223",
+        "weight_shape": [
+          256,
+          128,
+          3,
+          3
+        ],
+        "alpha_min": 0.04976923018693924,
+        "alpha_median": 0.09722426161170006,
+        "alpha_max": 0.23571734130382538,
+        "r": 2.4244703677488144,
+        "median_channel_bits_lost": 1.2776696210004483
+      },
+      {
+        "name": "/layer3/layer3.0/conv2/Conv",
+        "weight_name": "onnx::Conv_226",
+        "weight_shape": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "alpha_min": 0.06851301342248917,
+        "alpha_median": 0.15017519891262054,
+        "alpha_max": 0.563919186592102,
+        "r": 3.7550753431678054,
+        "median_channel_bits_lost": 1.908841854776586
+      },
+      {
+        "name": "/layer3/layer3.0/downsample/downsample.0/Conv",
+        "weight_name": "onnx::Conv_229",
+        "weight_shape": [
+          256,
+          128,
+          1,
+          1
+        ],
+        "alpha_min": 0.01788618415594101,
+        "alpha_median": 0.08295013383030891,
+        "alpha_max": 0.4081612229347229,
+        "r": 4.920561355207676,
+        "median_channel_bits_lost": 2.2988229127548454
+      },
+      {
+        "name": "/layer3/layer3.1/conv1/Conv",
+        "weight_name": "onnx::Conv_232",
+        "weight_shape": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "alpha_min": 0.04402635991573334,
+        "alpha_median": 0.08982985094189644,
+        "alpha_max": 0.27238303422927856,
+        "r": 3.032210689133402,
+        "median_channel_bits_lost": 1.600370000741046
+      },
+      {
+        "name": "/layer3/layer3.1/conv2/Conv",
+        "weight_name": "onnx::Conv_235",
+        "weight_shape": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "alpha_min": 0.027029499411582947,
+        "alpha_median": 0.16454745829105377,
+        "alpha_max": 0.9701208472251892,
+        "r": 5.89569026043068,
+        "median_channel_bits_lost": 2.559660732119776
+      },
+      {
+        "name": "/layer4/layer4.0/conv1/Conv",
+        "weight_name": "onnx::Conv_238",
+        "weight_shape": [
+          512,
+          256,
+          3,
+          3
+        ],
+        "alpha_min": 0.029651079326868057,
+        "alpha_median": 0.07712090760469437,
+        "alpha_max": 0.275150328874588,
+        "r": 3.567778666259363,
+        "median_channel_bits_lost": 1.835026117782179
+      },
+      {
+        "name": "/layer4/layer4.0/conv2/Conv",
+        "weight_name": "onnx::Conv_241",
+        "weight_shape": [
+          512,
+          512,
+          3,
+          3
+        ],
+        "alpha_min": 0.03793230280280113,
+        "alpha_median": 0.2524193674325943,
+        "alpha_max": 1.065816044807434,
+        "r": 4.222402011573252,
+        "median_channel_bits_lost": 2.078063943084053
+      },
+      {
+        "name": "/layer4/layer4.0/downsample/downsample.0/Conv",
+        "weight_name": "onnx::Conv_244",
+        "weight_shape": [
+          512,
+          256,
+          1,
+          1
+        ],
+        "alpha_min": 0.02774818241596222,
+        "alpha_median": 0.21198634058237076,
+        "alpha_max": 0.9034910202026367,
+        "r": 4.262024702726403,
+        "median_channel_bits_lost": 2.091538955015876
+      },
+      {
+        "name": "/layer4/layer4.1/conv1/Conv",
+        "weight_name": "onnx::Conv_247",
+        "weight_shape": [
+          512,
+          512,
+          3,
+          3
+        ],
+        "alpha_min": 0.022999748587608337,
+        "alpha_median": 0.06181076914072037,
+        "alpha_max": 0.2761244475841522,
+        "r": 4.467254677829983,
+        "median_channel_bits_lost": 2.1593885049140096
+      },
+      {
+        "name": "/layer4/layer4.1/conv2/Conv",
+        "weight_name": "onnx::Conv_250",
+        "weight_shape": [
+          512,
+          512,
+          3,
+          3
+        ],
+        "alpha_min": 0.34051966667175293,
+        "alpha_median": 0.6506827771663666,
+        "alpha_max": 2.873323917388916,
+        "r": 4.415859798689992,
+        "median_channel_bits_lost": 2.1426943680070263
+      }
+    ],
+    "top_three": [
+      {
+        "name": "/conv1/Conv",
+        "weight_name": "onnx::Conv_193",
+        "weight_shape": [
+          64,
+          3,
+          7,
+          7
+        ],
+        "alpha_min": 1.3656694420889192e-14,
+        "alpha_median": 0.05906644091010094,
+        "alpha_max": 0.39387544989585876,
+        "r": 6.668345744673135,
+        "median_channel_bits_lost": 2.737328908042681
+      },
+      {
+        "name": "/layer3/layer3.1/conv2/Conv",
+        "weight_name": "onnx::Conv_235",
+        "weight_shape": [
+          256,
+          256,
+          3,
+          3
+        ],
+        "alpha_min": 0.027029499411582947,
+        "alpha_median": 0.16454745829105377,
+        "alpha_max": 0.9701208472251892,
+        "r": 5.89569026043068,
+        "median_channel_bits_lost": 2.559660732119776
+      },
+      {
+        "name": "/layer3/layer3.0/downsample/downsample.0/Conv",
+        "weight_name": "onnx::Conv_229",
+        "weight_shape": [
+          256,
+          128,
+          1,
+          1
+        ],
+        "alpha_min": 0.01788618415594101,
+        "alpha_median": 0.08295013383030891,
+        "alpha_max": 0.4081612229347229,
+        "r": 4.920561355207676,
+        "median_channel_bits_lost": 2.2988229127548454
+      }
+    ],
+    "median_r": 3.661427004713584,
+    "median_bits_lost": 1.8724060341339663
+  },
+  "forecast": {
+    "recorded_at_utc": "2026-11-22T22:15:49.579675+00:00",
+    "phase": "after FP32 channel analysis, before either INT8 quantization or test evaluation",
+    "text": "Медіана відношень діапазонів каналів r=3.661427; відповідна втрата роздільності становить 1.872406 біта. Найбільше r=6.668346. Очікую, що потензорна квантизація знизить згоду з FP32 порівняно з поканальною, оскільки крок для слабших каналів стане грубішим. За такого розкиду діапазонів очікую невеликої зміни macro-F1 та зміни accuracy в межах шуму за правилом |b−c| ≤ 2√(b+c). Тобто не прогнозую помітного погіршення якості за критерієм роботи. Сам критерій перевіряє accuracy; окремої стандартної похибки macro-F1 він не задає.",
+    "text_sha256": "bd864c168e89b3f7a66f70dac618dffd97d5cd8d8b175869858d9afd16fc8423",
+    "readme_before_experiment_sha256": "c16a4a584fbb0230d57e0090d7f160507c98357784b503d6684fe3df0051e193"
+  },
+  "latency": {
+    "fp32": {
+      "measurements": 300,
+      "p50_ms": 23.221041483338922,
+      "p95_ms": 23.80455657839775,
+      "round_p50_interval_ms": [
+        23.20295851677656,
+        23.283833521418273
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "measurements_ms": [
+            24.805999943055212,
+            30.025499989278615,
+            25.81862499937415,
+            23.777708993293345,
+            23.30295799765736,
+            23.147291969507933,
+            23.725833045318723,
+            23.57695798855275,
+            23.48962496034801,
+            23.201624979265034,
+            23.0707919690758,
+            23.43137504067272,
+            23.512291023507714,
+            23.196374997496605,
+            23.442208068445325,
+            23.103042040020227,
+            23.025249945931137,
+            23.30895804334432,
+            23.350583971478045,
+            23.42924999538809,
+            23.262000060640275,
+            23.332207929342985,
+            23.223583004437387,
+            23.06625002529472,
+            23.38754094671458,
+            23.113040952011943,
+            23.048292030580342,
+            23.304207948967814,
+            23.26183393597603,
+            23.318041930906475,
+            23.166875005699694,
+            23.35987496189773,
+            23.126374930143356,
+            23.15279096364975,
+            23.344250046648085,
+            23.053833981975913,
+            23.063083994202316,
+            23.22987501975149,
+            23.19762494880706,
+            23.15316698513925,
+            23.196666967123747,
+            23.326000082306564,
+            23.195082903839648,
+            23.089499911293387,
+            23.362166015431285,
+            23.121709004044533,
+            23.07270804885775,
+            23.350375005975366,
+            23.126707994379103,
+            23.08445901144296,
+            23.344666929915547,
+            23.525500087998807,
+            23.266208008863032,
+            23.20554095786065,
+            23.56283296830952,
+            23.1853750301525,
+            23.14833295531571,
+            23.280917084775865,
+            23.041749955154955,
+            23.05037504993379,
+            23.39691703673452,
+            23.1371249537915,
+            23.321166983805597,
+            23.14549998845905,
+            23.31912494264543,
+            23.093707975931466,
+            23.094584001228213,
+            23.379125050269067,
+            23.0918750166893,
+            23.005625000223517,
+            23.29104207456112,
+            23.075666977092624,
+            23.157957941293716,
+            23.864209069870412,
+            23.51354097481817,
+            23.49475002847612,
+            23.227624944411218,
+            23.57204200234264,
+            23.2259159674868,
+            23.41458306182176,
+            23.364667082205415,
+            23.122292011976242,
+            23.709582979790866,
+            23.422291036695242,
+            23.577374988235533,
+            23.444583057425916,
+            23.233416955918074,
+            23.4298330033198,
+            23.09558296110481,
+            23.47437501884997,
+            23.320334032177925,
+            23.07150000706315,
+            23.618584033101797,
+            23.37420789990574,
+            23.760707932524383,
+            23.082875064574182,
+            23.286749958060682,
+            23.61154102254659,
+            23.272332968190312,
+            23.405999992974102
+          ],
+          "p50_ms": 23.283833521418273,
+          "p95_ms": 23.76155798556283
+        },
+        {
+          "round": 2,
+          "measurements_ms": [
+            23.38458294980228,
+            23.05874996818602,
+            23.032750003039837,
+            23.23762490414083,
+            23.11225002631545,
+            23.339624982327223,
+            23.109667003154755,
+            23.379415972158313,
+            23.12420797534287,
+            23.123665945604444,
+            23.261375026777387,
+            23.012666031718254,
+            23.018957930617034,
+            23.49633304402232,
+            23.093334049917758,
+            23.02533306647092,
+            23.19733309559524,
+            23.251250036992133,
+            23.20870803669095,
+            23.099999991245568,
+            23.307583993300796,
+            23.09925004374236,
+            23.07362505234778,
+            23.357416968792677,
+            23.102291044779122,
+            23.049874929711223,
+            23.250333964824677,
+            23.15154194366187,
+            23.210125043988228,
+            23.12587504275143,
+            23.59912497922778,
+            23.160082986578345,
+            23.101833066903055,
+            23.343291017226875,
+            23.019209038466215,
+            23.04733288474381,
+            23.279040935449302,
+            23.121415986679494,
+            23.207625024951994,
+            23.72970897704363,
+            23.431124980561435,
+            23.454290931113064,
+            23.13475008122623,
+            23.388250032439828,
+            23.04945793002844,
+            23.069833987392485,
+            23.288500029593706,
+            23.00645806826651,
+            23.10908294748515,
+            23.218541988171637,
+            23.332249955274165,
+            23.21579202543944,
+            23.16045796032995,
+            23.352458025328815,
+            23.100041085854173,
+            23.103166953660548,
+            23.33787502720952,
+            23.060915991663933,
+            23.255708045326173,
+            23.253291030414402,
+            23.212875006720424,
+            23.129374952986836,
+            23.08362501207739,
+            23.30937492661178,
+            23.27283297199756,
+            23.146042018197477,
+            23.366959067061543,
+            22.98470796085894,
+            23.1357499724254,
+            23.335249978117645,
+            23.052542004734278,
+            23.105083964765072,
+            23.32741708960384,
+            23.477792041376233,
+            23.294667014852166,
+            23.169707972556353,
+            23.43974995892495,
+            23.307292023673654,
+            23.043791064992547,
+            23.283999995328486,
+            23.067667032592,
+            23.038540966808796,
+            23.314250051043928,
+            23.278958979062736,
+            23.39229208882898,
+            23.210500017739832,
+            23.3632909366861,
+            23.06612499523908,
+            23.19829200860113,
+            23.296541068702936,
+            22.964458097703755,
+            23.03020900581032,
+            23.314333986490965,
+            23.18566699977964,
+            23.176832939498127,
+            23.945832974277437,
+            23.61491695046425,
+            23.46308308187872,
+            23.04495801217854,
+            23.546374985016882
+          ],
+          "p50_ms": 23.20295851677656,
+          "p95_ms": 23.49883514107205
+        },
+        {
+          "round": 3,
+          "measurements_ms": [
+            23.117125034332275,
+            23.059249971993268,
+            23.20275001693517,
+            23.228083038702607,
+            23.24083389248699,
+            23.02566694561392,
+            23.29562499653548,
+            23.14054104499519,
+            23.139124969020486,
+            23.449665983207524,
+            23.17529101856053,
+            23.146332940086722,
+            23.413041955791414,
+            23.203707998618484,
+            23.23433302808553,
+            23.118333076126873,
+            23.331459029577672,
+            23.368416004814208,
+            23.125958046875894,
+            24.62074998766184,
+            25.78204101882875,
+            24.557708064094186,
+            24.88595899194479,
+            26.438375003635883,
+            24.365332908928394,
+            23.386624990962446,
+            22.993249935097992,
+            23.305000038817525,
+            23.280958994291723,
+            22.971208905801177,
+            23.42841704376042,
+            23.030125070363283,
+            23.047166992910206,
+            23.41966691892594,
+            23.049209034070373,
+            23.13866699114442,
+            23.23375002015382,
+            23.330916999839246,
+            23.13037507701665,
+            23.09429191518575,
+            23.30908295698464,
+            23.298999993130565,
+            23.223500000312924,
+            23.3394579263404,
+            23.01400003489107,
+            22.98158302437514,
+            23.275958956219256,
+            23.127167019993067,
+            23.213167092762887,
+            23.01799994893372,
+            23.6427920171991,
+            25.49620799254626,
+            24.685667012818158,
+            24.502707994543016,
+            23.8014169735834,
+            23.14237505197525,
+            23.102959035895765,
+            23.3694160124287,
+            23.227166035212576,
+            23.067833040840924,
+            23.431124980561435,
+            23.12199992593378,
+            23.124041967093945,
+            23.340582964010537,
+            23.191082989796996,
+            23.182625067420304,
+            23.227624944411218,
+            23.365958011709154,
+            23.027125047519803,
+            23.07837491389364,
+            23.32066697999835,
+            23.04037509020418,
+            23.00962491426617,
+            23.206291953101754,
+            23.06383289396763,
+            23.204874945804477,
+            23.123417049646378,
+            23.21858296636492,
+            23.117167060263455,
+            23.08054198510945,
+            23.37004104629159,
+            23.041625041514635,
+            23.064541979692876,
+            23.290334036573768,
+            23.038499988615513,
+            23.05145899299532,
+            23.19920901209116,
+            23.144125007092953,
+            23.16066704224795,
+            23.00966705661267,
+            23.34820805117488,
+            23.03170890081674,
+            22.985083982348442,
+            23.31283304374665,
+            23.2410830212757,
+            23.473875015042722,
+            24.57245800178498,
+            23.53541599586606,
+            23.26625003479421,
+            23.09412509202957
+          ],
+          "p50_ms": 23.205583449453115,
+          "p95_ms": 24.623995838919654
+        }
+      ]
+    },
+    "int8": {
+      "measurements": 300,
+      "p50_ms": 5.782832973636687,
+      "p95_ms": 5.976295535219833,
+      "round_p50_interval_ms": [
+        5.770978983491659,
+        5.816375487484038
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "measurements_ms": [
+            5.922542070038617,
+            5.756083060987294,
+            5.9161249082535505,
+            5.860624951310456,
+            5.787166999652982,
+            5.960582988336682,
+            5.7323339860886335,
+            5.771875032223761,
+            5.9372090036049485,
+            5.7637919671833515,
+            5.789375049062073,
+            5.882250028662384,
+            5.76495798304677,
+            5.76441700104624,
+            5.903083016164601,
+            5.729874945245683,
+            5.8221250073984265,
+            5.809916998259723,
+            5.759665975347161,
+            5.74595807120204,
+            5.910124978981912,
+            5.719791981391609,
+            5.845292005687952,
+            5.857374984771013,
+            5.745333037339151,
+            5.919584073126316,
+            5.774333025328815,
+            5.751000018790364,
+            5.841917009092867,
+            5.723334033973515,
+            5.7338750921189785,
+            5.905000027269125,
+            5.727499956265092,
+            5.782832973636687,
+            5.827417015098035,
+            5.763291963376105,
+            5.761167034506798,
+            5.918459035456181,
+            5.744541995227337,
+            5.755666992627084,
+            5.859875003807247,
+            5.755291902460158,
+            5.7041250402107835,
+            6.074416916817427,
+            5.783375003375113,
+            5.909916013479233,
+            5.750500014983118,
+            5.757124978117645,
+            5.850833025760949,
+            5.772000062279403,
+            5.774040939286351,
+            5.8816660894081,
+            5.757040926255286,
+            5.739166052080691,
+            5.872250068932772,
+            5.758874933235347,
+            5.866541992872953,
+            5.858166026882827,
+            5.751625052653253,
+            5.749666946940124,
+            5.868959007784724,
+            5.721334018744528,
+            5.774750025011599,
+            5.788083071820438,
+            5.735416081734002,
+            5.733042024075985,
+            5.868999985978007,
+            5.710875033400953,
+            5.853333044797182,
+            5.747791030444205,
+            5.737165920436382,
+            5.873249960131943,
+            5.758167011663318,
+            5.7492919731885195,
+            5.804958054795861,
+            5.736833089031279,
+            5.715542007237673,
+            5.855125025846064,
+            5.760333966463804,
+            5.794208031147718,
+            5.854374961927533,
+            5.751083022914827,
+            5.724292015656829,
+            5.874334019608796,
+            5.748916999436915,
+            5.75691694393754,
+            5.875459057278931,
+            5.770082934759557,
+            5.715667037293315,
+            5.942624993622303,
+            5.750790936872363,
+            5.8217920595780015,
+            5.782832973636687,
+            5.7266250951215625,
+            5.843166029080749,
+            5.73637499473989,
+            5.719791981391609,
+            5.834707990288734,
+            5.754207959398627,
+            5.734249949455261
+          ],
+          "p50_ms": 5.770978983491659,
+          "p95_ms": 5.919731972971931
+        },
+        {
+          "round": 2,
+          "measurements_ms": [
+            5.7539999252185225,
+            5.766708054579794,
+            5.905207945033908,
+            5.76441700104624,
+            5.739709013141692,
+            5.917125032283366,
+            5.775082972832024,
+            5.801707971841097,
+            5.884582991711795,
+            5.746625014580786,
+            5.816083983518183,
+            5.892415996640921,
+            5.739415995776653,
+            5.8721250388771296,
+            5.846457905136049,
+            5.767624941654503,
+            5.928124999627471,
+            5.771541967988014,
+            5.759375053457916,
+            5.92558307107538,
+            5.7229590602219105,
+            5.784332985058427,
+            5.899542011320591,
+            5.823374958708882,
+            5.784915992990136,
+            5.888457992114127,
+            5.725917057134211,
+            5.801332998089492,
+            5.881958059035242,
+            5.713750026188791,
+            5.853000096976757,
+            5.814249976538122,
+            5.744124995544553,
+            5.7148749474436045,
+            5.90016704518348,
+            5.705374991521239,
+            5.956416949629784,
+            5.765291978605092,
+            5.705957999452949,
+            5.918790935538709,
+            5.772082949988544,
+            5.747874965891242,
+            6.0064170975238085,
+            6.032791920006275,
+            6.264125113375485,
+            6.5626660361886024,
+            6.460041971877217,
+            6.098375073634088,
+            5.92287490144372,
+            5.907958024181426,
+            6.434416980482638,
+            5.891417036764324,
+            6.016750005073845,
+            5.975582986138761,
+            5.761291948147118,
+            5.807125009596348,
+            5.965958000160754,
+            5.851457943208516,
+            5.78999996650964,
+            6.077250000089407,
+            5.940167000517249,
+            5.7808329584077,
+            5.8432091027498245,
+            5.7098750257864594,
+            5.9172919718548656,
+            5.7461250107735395,
+            5.786958034150302,
+            5.909457919187844,
+            5.776042002253234,
+            5.779833998531103,
+            5.882999976165593,
+            5.74387505184859,
+            5.737417028285563,
+            5.9016249142587185,
+            5.749040981754661,
+            5.7642500614747405,
+            5.956665962003171,
+            5.717958090826869,
+            5.774041987024248,
+            5.908958031795919,
+            5.772665957920253,
+            5.819750018417835,
+            5.86008292157203,
+            5.726041970774531,
+            5.897958064451814,
+            5.840791971422732,
+            5.808082991279662,
+            5.954791093245149,
+            5.8166669914498925,
+            5.730957956984639,
+            5.995500017888844,
+            5.787792033515871,
+            5.765458918176591,
+            5.906917038373649,
+            5.7507919846102595,
+            5.797709105536342,
+            5.891084088943899,
+            5.736125051043928,
+            5.854542017914355,
+            5.902416072785854
+          ],
+          "p50_ms": 5.816375487484038,
+          "p95_ms": 6.078306253766641
+        },
+        {
+          "round": 3,
+          "measurements_ms": [
+            5.757458973675966,
+            5.904417019337416,
+            5.7541250716894865,
+            5.745333037339151,
+            5.989874945953488,
+            5.723458016291261,
+            5.806750035844743,
+            5.782790947705507,
+            5.773416021838784,
+            5.749374977312982,
+            5.841500009410083,
+            5.739749991334975,
+            5.8995840372517705,
+            5.735500017181039,
+            5.750166019424796,
+            5.853499984368682,
+            5.757874925620854,
+            5.764374975115061,
+            5.8194579323753715,
+            5.752167082391679,
+            5.749082891270518,
+            5.873292102478445,
+            5.729749915190041,
+            5.768707953393459,
+            5.836957949213684,
+            5.7790420250967145,
+            5.758499959483743,
+            5.880375043489039,
+            5.736791994422674,
+            5.791250034235418,
+            5.788083071820438,
+            5.745209055021405,
+            5.698041990399361,
+            5.904167075641453,
+            5.703457980416715,
+            5.839332938194275,
+            5.732749938033521,
+            5.7461250107735395,
+            5.875832983292639,
+            5.743624991737306,
+            5.757541977800429,
+            5.841832957230508,
+            5.752124940045178,
+            5.759499967098236,
+            5.85016596596688,
+            6.096541997976601,
+            5.775874946266413,
+            5.867457948625088,
+            5.740083986893296,
+            5.839666933752596,
+            5.957292043603957,
+            5.724040907807648,
+            5.797707941383123,
+            5.896250018849969,
+            5.716958083212376,
+            5.938332993537188,
+            5.838625016622245,
+            5.748625029809773,
+            5.951124941930175,
+            5.777915939688683,
+            5.766082904301584,
+            5.894333007745445,
+            5.761249922215939,
+            5.790124996565282,
+            5.872582900337875,
+            5.746333976276219,
+            5.777542013674974,
+            5.915457964874804,
+            5.750333075411618,
+            5.831582937389612,
+            5.842499900609255,
+            5.736125051043928,
+            5.855457973666489,
+            5.926833022385836,
+            5.733874975703657,
+            5.847334046848118,
+            5.866375053301454,
+            5.765083013102412,
+            5.941790994256735,
+            5.772750009782612,
+            5.7604999747127295,
+            5.995957995764911,
+            5.772707983851433,
+            5.768875009380281,
+            5.969292018562555,
+            5.760709056630731,
+            5.760416970588267,
+            5.989833967760205,
+            5.77429193072021,
+            5.772375036031008,
+            5.883416975848377,
+            5.7360000209882855,
+            5.931208026595414,
+            5.757750011980534,
+            5.729333031922579,
+            5.934374989010394,
+            5.77412499114871,
+            5.730957956984639,
+            5.9596250066533685,
+            5.748791038058698
+          ],
+          "p50_ms": 5.77420846093446,
+          "p95_ms": 5.960108357248828
+        }
+      ]
+    },
+    "intervals_disjoint": true,
+    "p50_speedup": 4.015513086613629,
+    "p95_speedup": 3.9831625524727534,
+    "protocol": {
+      "batch_size": 1,
+      "intra_op_num_threads": 1,
+      "inter_op_num_threads": 1,
+      "rounds": 3,
+      "variant_order": [
+        "fp32",
+        "int8"
+      ],
+      "warmups_per_variant_per_round": 20,
+      "measurements_per_variant_per_round": 100,
+      "timed_operation": "one session.run between two time.perf_counter calls",
+      "percentile_method": "numpy.percentile default linear",
+      "input_prepared_before_timing": true,
+      "sessions_created_before_timing": true
+    },
+    "input_file": "22076.jpg",
+    "context_before": {
+      "recorded_at_utc": "2026-11-22T22:17:26.792115+00:00",
+      "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23068771)\t100%; charged; 0:00 remaining present: true",
+      "process_cpu_snapshot": "%CPU COMM\n 99.6 /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python\n 20.3 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer\n  4.9 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds\n  2.7 /usr/libexec/airportd\n  2.2 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  1.4 /Applications/Telegram.app/Contents/MacOS/Telegram\n  1.2 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  1.1 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN\n  0.9 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored\n  0.8 /usr/libexec/locationd\n  0.7 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores\n  0.2 /usr/libexec/wifip2pd\n  0.2 /usr/sbin/bluetoothd\n  0.1 /Applications/ChatGPT.app/Contents/MacOS/ChatGPT\n  0.1 /usr/libexec/corebrightnessd\n  0.1 /usr/libexec/rapportd\n  0.1 /usr/libexec/sharingd\n  0.1 /Applications/WhatsApp.localized/WhatsApp.app/Contents/MacOS/WhatsApp\n  0.1 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd\n  0.1 /usr/libexec/logd\n  0.0 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd\n  0.0 /usr/libexec/AssetCache/AssetCache\n  0.0 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService\n  0.0 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd\n  0.0 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted_helper\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/CoreServices/ScopedBookmarkAgent\n  0.0 /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd\n  0.0 /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd\n  0.0 /usr/libexec/findmybeaconingd\n  0.0 /usr/libexec/aneuserd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Versions/A/XPCServices/com.apple.MobileSoftwareUpdate.CleanupPreparePathService.xpc/Contents/MacOS/com.apple.MobileSoftwareUpdate.CleanupPreparePathService\n  0.0 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/PowerUIAgent\n  0.0 /usr/libexec/powerdatad\n  0.0 /System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettingsAgent\n  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XProtectBridgeService.xpc/Contents/MacOS/XProtectBridgeService\n  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService\n  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice\n  0.0 /usr/libexec/seputil\n  0.0 /usr/libexec/mlhostd\n  0.0 /System/Library/CoreServices/ReportCrash\n  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XprotectService.xpc/Contents/MacOS/XprotectService\n  0.0 /usr/libexec/sysmond\n  0.0 /usr/sbin/BTLEServerAgent\n  0.0 /usr/libexec/sandboxd\n  0.0 /System/Library/PrivateFrameworks/ReplicatorCore.framework/Support/replicatord\n  0.0 /System/Library/PrivateFrameworks/SessionCore.framework/Support/liveactivitiesd\n  0.0 /System/Library/PrivateFrameworks/iCloudDriveService.framework/XPCServices/ContainerMetadataExtractor.xpc/Contents/MacOS/ContainerMetadataExtractor\n  0.0 /System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/XPCServices/AppPredictionIntentsHelperService.xpc/Contents/MacOS/AppPredictionIntentsHelperService\n  0.0 /System/Library/CoreServices/osanalyticshelper\n  0.0 /usr/libexec/triald_system\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustdFileHelper\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/secinitd\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/secinitd\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /usr/libexec/securityd_system\n  0.0 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService\n  0.0 /usr/libexec/amfid\n  0.0 /System/Library/PrivateFrameworks/IntelligenceFlowRuntime.framework/Versions/A/intelligenceflowd\n  0.0 /usr/libexec/keyboardservicesd\n  0.0 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell\n  0.0 /System/Library/PrivateFrameworks/NearFieldPrivateServices.framework/Versions/A/XPCServices/NFStorageServer.xpc/Contents/MacOS/NFStorageServer\n  0.0 /usr/libexec/nfcd\n  0.0 /usr/libexec/ospredictiond\n  0.0 /usr/libexec/online-auth-agent\n  0.0 /usr/libexec/gamecontrolleragentd\n  0.0 /usr/libexec/gamecontrollerd\n  0.0 /usr/libexec/feedbackd\n  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService\n  0.0 /usr/libexec/assessmentagent\n  0.0 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService\n  0.0 /usr/libexec/audioanalyticsd\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/CoreServices/Dock.app/Contents/XPCServices/DockHelper.xpc/Contents/MacOS/DockHelper\n  0.0 /usr/libexec/mobileactivationd\n  0.0 /System/Library/PrivateFrameworks/DeviceCheckInternal.framework/devicecheckd\n  0.0 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbstated\n  0.0 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent\n  0.0 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent\n  0.0 /System/Library/PrivateFrameworks/CoreRecents.framework/Versions/A/Support/recentsd\n  0.0 /System/Library/Frameworks/Contacts.framework/Support/contactsd\n  0.0 /usr/libexec/appleaccountd\n  0.0 /System/Library/PrivateFrameworks/iCloudNotification.framework/iCloudNotificationAgent\n  0.0 /System/Library/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /System/Library/CoreServices/pbs\n  0.0 /System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/Frameworks/StoreKit.framework/Support/storekitagent\n  0.0 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService\n  0.0 /System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/XPCServices/SetStoreUpdateService.xpc/Contents/MacOS/SetStoreUpdateService\n  0.0 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd\n  0.0 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Resources/backgroundtaskmanagementd\n  0.0 /Applications/Microsoft PowerPoint.app/Contents/MacOS/Microsoft PowerPoint\n  0.0 /usr/libexec/MTLAssetUpgraderD\n  0.0 /usr/libexec/siriknowledged\n  0.0 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Support/BackgroundTaskManagementAgent.app/Contents/MacOS/BackgroundTaskManagementAgent\n  0.0 /System/Library/CoreServices/ReportCrash\n  0.0 /System/Library/PrivateFrameworks/AppSSO.framework/Support/AppSSOAgent.app/Contents/MacOS/AppSSOAgent\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/logd_helper\n  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper\n  0.0 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU\n  0.0 /usr/libexec/containermanagerd_system\n  0.0 /System/Library/ExtensionKit/Extensions/WebThumbnailExtension.appex/Contents/MacOS/WebThumbnailExtension\n  0.0 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted\n  0.0 /System/Library/ExtensionKit/Extensions/OfficeThumbnailExtension.appex/Contents/MacOS/OfficeThumbnailExtension\n  0.0 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce\n  0.0 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsagent\n  0.0 /System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/XPCServices/com.apple.iCloudHelper.xpc/Contents/MacOS/com.apple.iCloudHelper\n  0.0 /usr/libexec/GamePolicyAgent\n  0.0 /System/Library/CoreServices/TextInputSwitcher.app/Contents/MacOS/TextInputSwitcher\n  0.0 /usr/libexec/triald\n  0.0 /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent\n  0.0 /System/Library/CoreServices/iconservicesd\n  0.0 /System/Library/CoreServices/iconservicesagent\n  0.0 /System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd\n  0.0 /usr/libexec/nesessionmanager\n  0.0 /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification\n  0.0 /System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd\n  0.0 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent\n  0.0 /usr/libexec/inputanalyticsd\n  0.0 /usr/libexec/swcd\n  0.0 /usr/libexec/biometrickitd\n  0.0 /System/Cryptexes/App/usr/libexec/AuthenticationServicesAgent\n  0.0 /System/Library/PrivateFrameworks/WorkflowKit.framework/XPCServices/ShortcutsViewService.xpc/Contents/MacOS/ShortcutsViewService\n  0.0 /System/Library/CoreServices/Siri.app/Contents/XPCServices/SiriNCService.xpc/Contents/MacOS/SiriNCService\n  0.0 /System/Library/CoreServices/Siri.app/Contents/MacOS/Siri\n  0.0 /System/Library/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Pages.app/Contents/MacOS/Pages\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd\n  0.0 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated\n  0.0 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd\n  0.0 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/system_installd\n  0.0 /System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd\n  0.0 /System/Library/PrivateFrameworks/DataAccess.framework/Support/dataaccessd\n  0.0 /System/Library/PrivateFrameworks/IntelligenceFlowContextRuntime.framework/Versions/A/intelligencecontextd\n  0.0 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex\n  0.0 /usr/libexec/PerfPowerServices\n  0.0 /usr/libexec/tipsd\n  0.0 /usr/libexec/ptpcamerad\n  0.0 /System/Library/Frameworks/ImageCaptureCore.framework/Versions/A/XPCServices/mscamerad-xpc.xpc/Contents/MacOS/mscamerad-xpc\n  0.0 /System/Applications/Preview.app/Contents/MacOS/Preview\n  0.0 /System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd\n  0.0 /System/Library/PrivateFrameworks/Synapse.framework/Support/contentlinkingd\n  0.0 /System/Library/CoreServices/UniversalControl.app/Contents/MacOS/UniversalControl\n  0.0 /usr/libexec/SidecarRelay\n  0.0 /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent\n  0.0 /usr/libexec/spotlightknowledged.updater\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/iOSSupport/System/Library/PrivateFrameworks/NewsUI2.framework/Versions/A/XPCServices/NewsScoringService.xpc/Contents/MacOS/NewsScoringService\n  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice\n  0.0 /System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd\n  0.0 /usr/libexec/replayd\n  0.0 /System/Library/PrivateFrameworks/IntelligencePlatformCompute.framework/Versions/A/XPCServices/IntelligencePlatformComputeService.xpc/Contents/MacOS/IntelligencePlatformComputeService\n  0.0 /usr/libexec/remindd\n  0.0 /usr/libexec/rtcreportingd\n  0.0 /System/Library/PrivateFrameworks/SystemStatusServer.framework/Support/systemstatusd\n  0.0 /usr/libexec/mobileassetd\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice\n  0.0 /usr/libexec/linkd\n  0.0 /System/Library/PrivateFrameworks/HearingCore.framework/heard\n  0.0 /usr/libexec/usermanagerd\n  0.0 /usr/libexec/coreduetd\n  0.0 /usr/libexec/proactived\n  0.0 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/ContextStoreAgent\n  0.0 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd\n  0.0 /System/Library/PrivateFrameworks/CoreADI.framework/adid\n  0.0 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd\n  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService\n  0.0 /usr/sbin/netbiosd\n  0.0 /System/Library/SystemConfiguration/EAPOLController.bundle/Contents/Resources/eapolclient\n  0.0 /Users/damik/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/CUALockScreenGuardian.app/Contents/MacOS/CUALockScreenGuardian\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsToday2.appex/Contents/MacOS/NewsToday2\n  0.0 /usr/libexec/knowledge-agent\n  0.0 /usr/libexec/duetexpertd\n  0.0 /usr/libexec/routined\n  0.0 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd\n  0.0 /System/Library/CoreServices/talagentd\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed\n  0.0 Contents/Library/LaunchAgents/com.microsoft.teams2.agent\n  0.0 /Applications/WhatsApp.localized/WhatsApp.app/Contents/PlugIns/ServiceExtension.appex/Contents/MacOS/ServiceExtension\n  0.0 /usr/libexec/nsurlsessiond\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/diskimagesiod\n  0.0 /usr/libexec/milod\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/StatusKit.framework/StatusKitAgent\n  0.0 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed\n  0.0 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd\n  0.0 /System/Applications/Weather.app/Contents/PlugIns/WeatherWidget.appex/Contents/MacOS/WeatherWidget\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex-code-mode-host\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Users/damik/Library/Application Support/Codex/artifact-sessions/runtime-generations/generation-UXDeXr/runtime/bin/node\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Users/damik/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex\n  0.0 /Applications/ChatGPT.app/Contents/Resources/native/bare-modifier-monitor\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/browser_crashpad_handler\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/browser_crashpad_handler\n  0.0 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.external.extra.arm64.xpc/Contents/MacOS/com.apple.dock.external.extra.arm64\n  0.0 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt\n  0.0 /System/Library/CoreServices/sharedfilelistd\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/chrome_crashpad_handler\n  0.0 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome\n  0.0 /Users/damik/Library/Application Support/Figma/FigmaAgent.app/Contents/MacOS/figma_agent\n  0.0 /System/Library/PrivateFrameworks/KerberosHelper/Helpers/DiskUnmountWatcher\n  0.0 /System/Applications/Stocks.app/Contents/PlugIns/StocksWidget.appex/Contents/MacOS/StocksWidget\n  0.0 /System/Library/PrivateFrameworks/iCloudDriveCore.framework/Versions/A/Support/bird\n  0.0 /Applications/Microsoft Excel.app/Contents/PlugIns/ExcelWidget_mac.appex/Contents/MacOS/ExcelWidget_mac\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 /Applications/Visual Studio Code.app/Contents/MacOS/Code\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /usr/libexec/apfsd\n  0.0 /usr/libexec/searchpartyuseragent\n  0.0 /usr/libexec/diskimagesiod\n  0.0 /usr/libexec/assetsubscriptiond\n  0.0 /System/Library/CoreServices/UserNotificationCenter.app/Contents/MacOS/UserNotificationCenter\n  0.0 /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service\n  0.0 /System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent\n  0.0 /Users/damik/.vscode/extensions/codeium.codeium-1.48.2/dist/e03af6ebc40b844314d448f947c80b636d093049/language_server_macos_arm\n  0.0 /Users/damik/.vscode/extensions/codeium.codeium-1.48.2/dist/e03af6ebc40b844314d448f947c80b636d093049/language_server_macos_arm\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /System/Library/Frameworks/PaperKit.framework/Contents/LinkedNotesUIService.app/Contents/MacOS/LinkedNotesUIService\n  0.0 /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent\n  0.0 /Applications/Microsoft Teams.app/Contents/PlugIns/TeamsWidgetExtension.appex/Contents/MacOS/TeamsWidgetExtension\n  0.0 /System/Library/CoreServices/Setup Assistant.app/Contents/Resources/mbuseragent\n  0.0 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeuid.app/Contents/MacOS/storeuid\n  0.0 /usr/libexec/aned\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /System/Library/PrivateFrameworks/UniversalAccess.framework/Versions/A/Resources/universalAccessAuthWarn.app/Contents/MacOS/universalAccessAuthWarn\n  0.0 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer\n  0.0 /System/Library/PrivateFrameworks/PassKitCore.framework/passd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdwrite\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent\n  0.0 /System/Library/PrivateFrameworks/People.framework/peopled\n  0.0 /usr/libexec/wifivelocityd\n  0.0 /System/Library/Frameworks/CoreSpotlight.framework/spotlightknowledged\n  0.0 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd\n  0.0 /System/Applications/Notes.app/Contents/PlugIns/com.apple.Notes.SpotlightIndexExtension.appex/Contents/MacOS/com.apple.Notes.SpotlightIndexExtension\n  0.0 /System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServices/com.apple.AmbientDisplayAgent.xpc/Contents/MacOS/com.apple.AmbientDisplayAgent\n  0.0 /System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime\n  0.0 /System/Cryptexes/App/usr/libexec/PasswordBreachAgent\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/lsd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/CoreServices/CrashReporterSupportHelper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt\n  0.0 /System/Library/CoreServices/SubmitDiagInfo\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordinationd\n  0.0 /System/Library/CoreServices/diagnostics_agent\n  0.0 /usr/sbin/systemstats\n  0.0 /opt/homebrew/opt/mysql/bin/mysqld\n  0.0 /bin/sh\n  0.0 /System/Library/Image Capture/Support/icdd\n  0.0 /System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent\n  0.0 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Applications/Weather.app/Contents/PlugIns/WeatherIntents.appex/Contents/MacOS/WeatherIntents\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 postgres: logical replication launcher \n  0.0 postgres: autovacuum launcher \n  0.0 postgres: walwriter \n  0.0 /System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fairplayd\n  0.0 /private/var/folders/4r/6j8kk64j66q9bctn1wn2rclc0000gn/X/52993D2E-90DC-5007-80A8-F5E13BCAF1B9/d/Wrapper/Megogo.app/PlugIns/Widget.appex/Widget\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/MobileTimer.framework/PlugIns/MobileTimerIntents.appex/Contents/MacOS/MobileTimerIntents\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /System/Applications/Clock.app/Contents/PlugIns/WorldClockWidget.appex/Contents/MacOS/WorldClockWidget\n  0.0 /System/Applications/Home.app/Contents/PlugIns/HomeEnergyWidgetsExtension.appex/Contents/MacOS/HomeEnergyWidgetsExtension\n  0.0 /System/Applications/Journal.app/Contents/PlugIns/JournalWidgetsSecure.appex/Contents/MacOS/JournalWidgetsSecure\n  0.0 /System/Applications/Journal.app/Contents/PlugIns/JournalWidgets.appex/Contents/MacOS/JournalWidgets\n  0.0 /System/Applications/VoiceMemos.app/Contents/PlugIns/RecordWidgetExtension.appex/Contents/MacOS/RecordWidgetExtension\n  0.0 /System/Applications/VoiceMemos.app/Contents/PlugIns/VoiceMemosSettingsWidgetExtension.appex/Contents/MacOS/VoiceMemosSettingsWidgetExtension\n  0.0 /System/Applications/FindMy.app/Contents/PlugIns/FindMyWidgetPeople.appex/Contents/MacOS/FindMyWidgetPeople\n  0.0 /System/Applications/Podcasts.app/Contents/PlugIns/PodcastsWidget.appex/Contents/MacOS/PodcastsWidget\n  0.0 /System/Applications/Home.app/Contents/PlugIns/HomeWidget.appex/Contents/MacOS/HomeWidget\n  0.0 /System/Library/CoreServices/Batteries.app/Contents/PlugIns/BatteriesAvocadoWidgetExtension.appex/Contents/MacOS/BatteriesAvocadoWidgetExtension\n  0.0 /System/Applications/FindMy.app/Contents/PlugIns/FindMyWidgetItems.appex/Contents/MacOS/FindMyWidgetItems\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper (Renderer).app/Contents/MacOS/Slack Helper (Renderer)\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsTodayIntents.appex/Contents/MacOS/NewsTodayIntents\n  0.0 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetIntentsExtension.appex/Contents/MacOS/ScreenTimeWidgetIntentsExtension\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsTag.appex/Contents/MacOS/NewsTag\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport\n  0.0 /usr/sbin/distnoted\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 postgres: background writer \n  0.0 postgres: checkpointer \n  0.0 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetExtension.appex/Contents/MacOS/ScreenTimeWidgetExtension\n  0.0 /usr/libexec/inboxupdaterd\n  0.0 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver\n  0.0 postgres: logger \n  0.0 /System/Applications/Calendar.app/Contents/PlugIns/CalendarWidgetExtension.appex/Contents/MacOS/CalendarWidgetExtension\n  0.0 /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension\n  0.0 /usr/libexec/gamepolicyd\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp\n  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoteagent\n  0.0 /usr/libexec/avconferenced\n  0.0 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent\n  0.0 /System/Library/PrivateFrameworks/TextInputUIMacHelper.framework/Versions/A/XPCServices/CursorUIViewService.xpc/Contents/MacOS/CursorUIViewService\n  0.0 /System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent\n  0.0 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd\n  0.0 /System/Library/CoreServices/UIKitSystem.app/Contents/MacOS/UIKitSystem\n  0.0 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight\n  0.0 /System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled\n  0.0 /System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.iCloudDriveFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.iCloudDriveFileProvider\n  0.0 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter\n  0.0 /System/Library/CoreServices/lockoutagent\n  0.0 /System/Library/PrivateFrameworks/CommunicationsFilter.framework/CMFSyncAgent\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd\n  0.0 /System/Library/ExtensionKit/Extensions/WallpaperAerialsExtension.appex/Contents/MacOS/WallpaperAerialsExtension\n  0.0 /usr/libexec/rosetta/oahd\n  0.0 /usr/libexec/nearbyd\n  0.0 /System/Library/ExtensionKit/Extensions/WallpaperSequoiaExtension.appex/Contents/MacOS/WallpaperSequoiaExtension\n  0.0 /System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod\n  0.0 /System/Library/PrivateFrameworks/AMPDevices.framework/Versions/A/Support/AMPDeviceDiscoveryAgent\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd\n  0.0 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary\n  0.0 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent\n  0.0 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd\n  0.0 /System/Library/CoreServices/sharedfilelistd\n  0.0 automountd\n  0.0 /System/Library/CoreServices/WallpaperAgent.app/Contents/MacOS/WallpaperAgent\n  0.0 /usr/sbin/filecoordinationd\n  0.0 /System/Library/CoreServices/AccessibilityUIServer.app/Contents/MacOS/AccessibilityUIServer\n  0.0 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder\n  0.0 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer\n  0.0 /usr/sbin/usernoted\n  0.0 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter\n  0.0 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd\n  0.0 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock\n  0.0 /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n  0.0 /System/Library/PrivateFrameworks/UserNotificationsCore.framework/Support/usernotificationsd\n  0.0 /Applications/Slack.app/Contents/MacOS/Slack\n  0.0 /System/Library/CoreServices/audioaccessoryd\n  0.0 /usr/libexec/ContinuityCaptureAgent\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/fontworker\n  0.0 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd\n  0.0 /usr/libexec/nsurlsessiond\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/lsd\n  0.0 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/BiomeAgent\n  0.0 /usr/libexec/pboard\n  0.0 /System/Library/CoreServices/WindowManager.app/Contents/MacOS/WindowManager\n  0.0 /usr/libexec/containermanagerd\n  0.0 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd\n  0.0 /usr/libexec/UserEventAgent\n  0.0 /usr/sbin/universalaccessd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/secd\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd\n  0.0 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/DriverExtensions/com.apple.DriverKit-IOUserDockChannelSerial.dext/com.apple.DriverKit-IOUserDockChannelSerial\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/searchpartyd\n  0.0 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/modelmanagerd\n  0.0 /System/Library/CoreServices/appleeventsd\n  0.0 Core Audio Driver (ZoomAudioDevice.driver)\n  0.0 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/UVCAssistant.systemextension/Contents/MacOS/UVCAssistant\n  0.0 Core Audio Driver (TVRemoteAudio.driver)\n  0.0 /usr/libexec/cameracaptured\n  0.0 Core Audio Driver (ParrotAudioPlugin.driver)\n  0.0 /usr/sbin/appleh13camerad\n  0.0 /usr/libexec/com.apple.cmio.videodriverkithostextension.systemextension/Contents/MacOS/com.apple.cmio.videodriverkithostextension\n  0.0 /Library/PostgreSQL/17/bin/postgres\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/audioclocksyncd\n  0.0 /usr/libexec/audiomxd\n  0.0 /usr/sbin/mDNSResponderHelper\n  0.0 /usr/sbin/WirelessRadioManagerd\n  0.0 Core Audio Driver (MSTeamsAudioDevice.driver)\n  0.0 /usr/sbin/mDNSResponder\n  0.0 /System/Library/CoreServices/TimeMachine/backupd\n  0.0 /usr/libexec/syspolicyd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd\n  0.0 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd\n  0.0 /usr/libexec/ApplicationFirewall/socketfilterfw\n  0.0 /usr/libexec/symptomsd\n  0.0 /usr/libexec/eligibilityd\n  0.0 /usr/libexec/lsd\n  0.0 /usr/sbin/coreaudiod\n  0.0 /usr/libexec/runningboardd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/timed\n  0.0 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd\n  0.0 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd_system\n  0.0 /System/Library/CoreServices/coreservicesd\n  0.0 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd\n  0.0 /usr/libexec/IOMFB_bics_daemon\n  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted\n  0.0 /usr/sbin/systemstats\n  0.0 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond\n  0.0 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/com.apple.cmio.registerassistantservice\n  0.0 /System/Library/CoreServices/launchservicesd\n  0.0 /usr/sbin/syslogd\n  0.0 /usr/libexec/configd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd\n  0.0 /usr/libexec/watchdogd\n  0.0 /usr/sbin/KernelEventAgent\n  0.0 /usr/libexec/AirPlayXPCHelper\n  0.0 /usr/libexec/dasd\n  0.0 autofsd\n  0.0 /System/Library/CoreServices/powerd.bundle/powerd\n  0.0 /usr/sbin/securityd\n  0.0 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd\n  0.0 /usr/libexec/thermalmonitord\n  0.0 /usr/libexec/remoted\n  0.0 /usr/libexec/UserEventAgent\n  0.0 /usr/libexec/diskarbitrationd\n  0.0 /System/Library/CoreServices/logind\n  0.0 /usr/sbin/notifyd\n  0.0 /usr/libexec/corerepaird\n  0.0 /usr/libexec/xprotectd\n  0.0 /usr/libexec/opendirectoryd\n  0.0 /usr/libexec/kernelmanagerd\n  0.0 ps\n  0.0 /sbin/launchd\n  0.0 Contents/Library/LoginItems/WindowDocumentResolverBroker.app/Contents/MacOS/WindowDocumentResolverBroker\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 uv\n  0.0 /System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/XPCServices/PerfPowerTelemetryClientRegistrationService.xpc/Contents/MacOS/PerfPowerTelemetryClientRegistrationService\n  0.0 /usr/libexec/textunderstandingd\n  0.0 /usr/libexec/neagent\n  0.0 /usr/libexec/nehelper\n  0.0 /usr/libexec/networkserviceproxy\n  0.0 cloudphotod\n  0.0 /System/Library/PrivateFrameworks/AssetCacheServicesExtensions.framework/XPCServices/AssetCacheTetheratorService.xpc/Contents/MacOS/AssetCacheTetheratorService\n  0.0 /usr/libexec/pkd\n  0.0 /System/Library/CoreServices/TimeMachine/backupd-helper\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/geodMachServiceBridge"
+    },
+    "context_after": {
+      "recorded_at_utc": "2026-11-22T22:17:37.346366+00:00",
+      "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23068771)\t100%; charged; 0:00 remaining present: true",
+      "process_cpu_snapshot": "%CPU COMM\n100.0 /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python\n 33.1 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer\n  3.5 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  2.7 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  1.6 /usr/libexec/ContinuityCaptureAgent\n  1.5 /usr/libexec/rapportd\n  1.3 /usr/libexec/locationd\n  0.9 /Applications/Telegram.app/Contents/MacOS/Telegram\n  0.7 /usr/libexec/SidecarRelay\n  0.6 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/com.apple.cmio.registerassistantservice\n  0.5 /usr/sbin/bluetoothd\n  0.5 /usr/libexec/airportd\n  0.5 /usr/libexec/sharingd\n  0.5 /usr/libexec/nearbyd\n  0.4 /System/Library/CoreServices/audioaccessoryd\n  0.4 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent\n  0.3 /usr/libexec/knowledge-agent\n  0.3 /usr/sbin/notifyd\n  0.2 /usr/libexec/searchpartyd\n  0.2 /usr/libexec/logd\n  0.2 /usr/libexec/milod\n  0.1 /sbin/launchd\n  0.1 /Applications/WhatsApp.localized/WhatsApp.app/Contents/MacOS/WhatsApp\n  0.1 /System/Library/PrivateFrameworks/StatusKit.framework/StatusKitAgent\n  0.1 /Applications/Slack.app/Contents/MacOS/Slack\n  0.1 /Applications/ChatGPT.app/Contents/MacOS/ChatGPT\n  0.1 /usr/libexec/PerfPowerServices\n  0.1 /System/Library/CoreServices/UniversalControl.app/Contents/MacOS/UniversalControl\n  0.1 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores\n  0.0 /usr/libexec/findmybeaconingd\n  0.0 /usr/libexec/aneuserd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Versions/A/XPCServices/com.apple.MobileSoftwareUpdate.CleanupPreparePathService.xpc/Contents/MacOS/com.apple.MobileSoftwareUpdate.CleanupPreparePathService\n  0.0 /System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/PowerUIAgent\n  0.0 /usr/libexec/powerdatad\n  0.0 /System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettingsAgent\n  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XProtectBridgeService.xpc/Contents/MacOS/XProtectBridgeService\n  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService\n  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice\n  0.0 /usr/libexec/seputil\n  0.0 /usr/libexec/mlhostd\n  0.0 /System/Library/CoreServices/ReportCrash\n  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XprotectService.xpc/Contents/MacOS/XprotectService\n  0.0 /usr/libexec/sysmond\n  0.0 /usr/sbin/BTLEServerAgent\n  0.0 /usr/libexec/sandboxd\n  0.0 /System/Library/PrivateFrameworks/ReplicatorCore.framework/Support/replicatord\n  0.0 /System/Library/PrivateFrameworks/SessionCore.framework/Support/liveactivitiesd\n  0.0 /System/Library/PrivateFrameworks/iCloudDriveService.framework/XPCServices/ContainerMetadataExtractor.xpc/Contents/MacOS/ContainerMetadataExtractor\n  0.0 /System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/XPCServices/AppPredictionIntentsHelperService.xpc/Contents/MacOS/AppPredictionIntentsHelperService\n  0.0 /System/Library/CoreServices/osanalyticshelper\n  0.0 /usr/libexec/triald_system\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustdFileHelper\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/containermanagerd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/secinitd\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/secinitd\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod\n  0.0 /usr/libexec/securityd_system\n  0.0 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService\n  0.0 /usr/libexec/amfid\n  0.0 /System/Library/PrivateFrameworks/IntelligenceFlowRuntime.framework/Versions/A/intelligenceflowd\n  0.0 /usr/libexec/keyboardservicesd\n  0.0 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell\n  0.0 /System/Library/PrivateFrameworks/NearFieldPrivateServices.framework/Versions/A/XPCServices/NFStorageServer.xpc/Contents/MacOS/NFStorageServer\n  0.0 /usr/libexec/nfcd\n  0.0 /usr/libexec/ospredictiond\n  0.0 /usr/libexec/online-auth-agent\n  0.0 /usr/libexec/gamecontrolleragentd\n  0.0 /usr/libexec/gamecontrollerd\n  0.0 /usr/libexec/feedbackd\n  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService\n  0.0 /usr/libexec/assessmentagent\n  0.0 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService\n  0.0 /usr/libexec/audioanalyticsd\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/CoreServices/Dock.app/Contents/XPCServices/DockHelper.xpc/Contents/MacOS/DockHelper\n  0.0 /usr/libexec/mobileactivationd\n  0.0 /System/Library/PrivateFrameworks/DeviceCheckInternal.framework/devicecheckd\n  0.0 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbstated\n  0.0 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent\n  0.0 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent\n  0.0 /System/Library/PrivateFrameworks/CoreRecents.framework/Versions/A/Support/recentsd\n  0.0 /System/Library/Frameworks/Contacts.framework/Support/contactsd\n  0.0 /usr/libexec/appleaccountd\n  0.0 /System/Library/PrivateFrameworks/iCloudNotification.framework/iCloudNotificationAgent\n  0.0 /System/Library/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /System/Library/CoreServices/pbs\n  0.0 /System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/Frameworks/StoreKit.framework/Support/storekitagent\n  0.0 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService\n  0.0 /System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/XPCServices/SetStoreUpdateService.xpc/Contents/MacOS/SetStoreUpdateService\n  0.0 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd\n  0.0 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Resources/backgroundtaskmanagementd\n  0.0 /Applications/Microsoft PowerPoint.app/Contents/MacOS/Microsoft PowerPoint\n  0.0 /usr/libexec/MTLAssetUpgraderD\n  0.0 /usr/libexec/siriknowledged\n  0.0 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Support/BackgroundTaskManagementAgent.app/Contents/MacOS/BackgroundTaskManagementAgent\n  0.0 /System/Library/CoreServices/ReportCrash\n  0.0 /System/Library/PrivateFrameworks/AppSSO.framework/Support/AppSSOAgent.app/Contents/MacOS/AppSSOAgent\n  0.0 /usr/libexec/secinitd\n  0.0 /usr/libexec/logd_helper\n  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper\n  0.0 /System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU\n  0.0 /usr/libexec/containermanagerd_system\n  0.0 /System/Library/ExtensionKit/Extensions/WebThumbnailExtension.appex/Contents/MacOS/WebThumbnailExtension\n  0.0 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted\n  0.0 /System/Library/ExtensionKit/Extensions/OfficeThumbnailExtension.appex/Contents/MacOS/OfficeThumbnailExtension\n  0.0 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce\n  0.0 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsagent\n  0.0 /System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/XPCServices/com.apple.iCloudHelper.xpc/Contents/MacOS/com.apple.iCloudHelper\n  0.0 /usr/libexec/GamePolicyAgent\n  0.0 /System/Library/CoreServices/TextInputSwitcher.app/Contents/MacOS/TextInputSwitcher\n  0.0 /usr/libexec/triald\n  0.0 /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent\n  0.0 /System/Library/CoreServices/iconservicesd\n  0.0 /System/Library/CoreServices/iconservicesagent\n  0.0 /System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd\n  0.0 /usr/libexec/nesessionmanager\n  0.0 /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification\n  0.0 /System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd\n  0.0 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent\n  0.0 /usr/libexec/inputanalyticsd\n  0.0 /usr/libexec/swcd\n  0.0 /usr/libexec/biometrickitd\n  0.0 /System/Cryptexes/App/usr/libexec/AuthenticationServicesAgent\n  0.0 /System/Library/PrivateFrameworks/WorkflowKit.framework/XPCServices/ShortcutsViewService.xpc/Contents/MacOS/ShortcutsViewService\n  0.0 /System/Library/CoreServices/Siri.app/Contents/XPCServices/SiriNCService.xpc/Contents/MacOS/SiriNCService\n  0.0 /System/Library/CoreServices/Siri.app/Contents/MacOS/Siri\n  0.0 /System/Library/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Pages.app/Contents/MacOS/Pages\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd\n  0.0 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated\n  0.0 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd\n  0.0 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/system_installd\n  0.0 /System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd\n  0.0 /System/Library/PrivateFrameworks/DataAccess.framework/Support/dataaccessd\n  0.0 /System/Library/PrivateFrameworks/IntelligenceFlowContextRuntime.framework/Versions/A/intelligencecontextd\n  0.0 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex\n  0.0 /usr/libexec/tipsd\n  0.0 /usr/libexec/ptpcamerad\n  0.0 /System/Library/Frameworks/ImageCaptureCore.framework/Versions/A/XPCServices/mscamerad-xpc.xpc/Contents/MacOS/mscamerad-xpc\n  0.0 /System/Applications/Preview.app/Contents/MacOS/Preview\n  0.0 /System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd\n  0.0 /System/Library/PrivateFrameworks/Synapse.framework/Support/contentlinkingd\n  0.0 /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent\n  0.0 /usr/libexec/spotlightknowledged.updater\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/iOSSupport/System/Library/PrivateFrameworks/NewsUI2.framework/Versions/A/XPCServices/NewsScoringService.xpc/Contents/MacOS/NewsScoringService\n  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice\n  0.0 /System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd\n  0.0 /usr/libexec/replayd\n  0.0 /System/Library/PrivateFrameworks/IntelligencePlatformCompute.framework/Versions/A/XPCServices/IntelligencePlatformComputeService.xpc/Contents/MacOS/IntelligencePlatformComputeService\n  0.0 /usr/libexec/remindd\n  0.0 /usr/libexec/rtcreportingd\n  0.0 /System/Library/PrivateFrameworks/SystemStatusServer.framework/Support/systemstatusd\n  0.0 /usr/libexec/mobileassetd\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice\n  0.0 /usr/libexec/linkd\n  0.0 /System/Library/PrivateFrameworks/HearingCore.framework/heard\n  0.0 /usr/libexec/usermanagerd\n  0.0 /usr/libexec/coreduetd\n  0.0 /usr/libexec/proactived\n  0.0 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/ContextStoreAgent\n  0.0 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd\n  0.0 /System/Library/PrivateFrameworks/CoreADI.framework/adid\n  0.0 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd\n  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService\n  0.0 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd\n  0.0 /usr/sbin/netbiosd\n  0.0 /System/Library/SystemConfiguration/EAPOLController.bundle/Contents/Resources/eapolclient\n  0.0 /Users/damik/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/CUALockScreenGuardian.app/Contents/MacOS/CUALockScreenGuardian\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsToday2.appex/Contents/MacOS/NewsToday2\n  0.0 /usr/libexec/duetexpertd\n  0.0 /usr/libexec/routined\n  0.0 /usr/libexec/wifip2pd\n  0.0 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd\n  0.0 /System/Library/CoreServices/talagentd\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed\n  0.0 Contents/Library/LaunchAgents/com.microsoft.teams2.agent\n  0.0 /Applications/WhatsApp.localized/WhatsApp.app/Contents/PlugIns/ServiceExtension.appex/Contents/MacOS/ServiceExtension\n  0.0 /usr/libexec/nsurlsessiond\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/trustd\n  0.0 /usr/libexec/diskimagesiod\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed\n  0.0 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd\n  0.0 /System/Applications/Weather.app/Contents/PlugIns/WeatherWidget.appex/Contents/MacOS/WeatherWidget\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex-code-mode-host\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Users/damik/Library/Application Support/Codex/artifact-sessions/runtime-generations/generation-UXDeXr/runtime/bin/node\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Users/damik/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif Renderer).app/Contents/MacOS/Codex (Aperitif Renderer)\n  0.0 /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex\n  0.0 /Applications/ChatGPT.app/Contents/Resources/native/bare-modifier-monitor\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/Codex (Aperitif).app/Contents/MacOS/Codex (Aperitif)\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/browser_crashpad_handler\n  0.0 /Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/157.0.8103.39/Helpers/browser_crashpad_handler\n  0.0 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.external.extra.arm64.xpc/Contents/MacOS/com.apple.dock.external.extra.arm64\n  0.0 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt\n  0.0 /System/Library/CoreServices/sharedfilelistd\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)\n  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/157.0.8103.79/Helpers/chrome_crashpad_handler\n  0.0 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome\n  0.0 /Users/damik/Library/Application Support/Figma/FigmaAgent.app/Contents/MacOS/figma_agent\n  0.0 /System/Library/PrivateFrameworks/KerberosHelper/Helpers/DiskUnmountWatcher\n  0.0 /System/Applications/Stocks.app/Contents/PlugIns/StocksWidget.appex/Contents/MacOS/StocksWidget\n  0.0 /System/Library/PrivateFrameworks/iCloudDriveCore.framework/Versions/A/Support/bird\n  0.0 /Applications/Microsoft Excel.app/Contents/PlugIns/ExcelWidget_mac.appex/Contents/MacOS/ExcelWidget_mac\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 /Applications/Visual Studio Code.app/Contents/MacOS/Code\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /usr/libexec/apfsd\n  0.0 /usr/libexec/searchpartyuseragent\n  0.0 /usr/libexec/diskimagesiod\n  0.0 /usr/libexec/assetsubscriptiond\n  0.0 /System/Library/CoreServices/UserNotificationCenter.app/Contents/MacOS/UserNotificationCenter\n  0.0 /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service\n  0.0 /System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent\n  0.0 /Users/damik/.vscode/extensions/codeium.codeium-1.48.2/dist/e03af6ebc40b844314d448f947c80b636d093049/language_server_macos_arm\n  0.0 /Users/damik/.vscode/extensions/codeium.codeium-1.48.2/dist/e03af6ebc40b844314d448f947c80b636d093049/language_server_macos_arm\n  0.0 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService\n  0.0 /System/Library/Frameworks/PaperKit.framework/Contents/LinkedNotesUIService.app/Contents/MacOS/LinkedNotesUIService\n  0.0 /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent\n  0.0 /Applications/Microsoft Teams.app/Contents/PlugIns/TeamsWidgetExtension.appex/Contents/MacOS/TeamsWidgetExtension\n  0.0 /System/Library/CoreServices/Setup Assistant.app/Contents/Resources/mbuseragent\n  0.0 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeuid.app/Contents/MacOS/storeuid\n  0.0 /usr/libexec/aned\n  0.0 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper\n  0.0 /System/Library/PrivateFrameworks/UniversalAccess.framework/Versions/A/Resources/universalAccessAuthWarn.app/Contents/MacOS/universalAccessAuthWarn\n  0.0 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer\n  0.0 /System/Library/PrivateFrameworks/PassKitCore.framework/passd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdwrite\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent\n  0.0 /System/Library/PrivateFrameworks/People.framework/peopled\n  0.0 /usr/libexec/wifivelocityd\n  0.0 /System/Library/Frameworks/CoreSpotlight.framework/spotlightknowledged\n  0.0 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd\n  0.0 /System/Applications/Notes.app/Contents/PlugIns/com.apple.Notes.SpotlightIndexExtension.appex/Contents/MacOS/com.apple.Notes.SpotlightIndexExtension\n  0.0 /System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServices/com.apple.AmbientDisplayAgent.xpc/Contents/MacOS/com.apple.AmbientDisplayAgent\n  0.0 /System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime\n  0.0 /System/Cryptexes/App/usr/libexec/PasswordBreachAgent\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/lsd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/CoreServices/CrashReporterSupportHelper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt\n  0.0 /System/Library/CoreServices/SubmitDiagInfo\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordinationd\n  0.0 /System/Library/CoreServices/diagnostics_agent\n  0.0 /usr/sbin/systemstats\n  0.0 /opt/homebrew/opt/mysql/bin/mysqld\n  0.0 /bin/sh\n  0.0 /System/Library/Image Capture/Support/icdd\n  0.0 /System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent\n  0.0 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Applications/Weather.app/Contents/PlugIns/WeatherIntents.appex/Contents/MacOS/WeatherIntents\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 postgres: logical replication launcher \n  0.0 postgres: autovacuum launcher \n  0.0 postgres: walwriter \n  0.0 /System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fairplayd\n  0.0 /private/var/folders/4r/6j8kk64j66q9bctn1wn2rclc0000gn/X/52993D2E-90DC-5007-80A8-F5E13BCAF1B9/d/Wrapper/Megogo.app/PlugIns/Widget.appex/Widget\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/PrivateFrameworks/MobileTimer.framework/PlugIns/MobileTimerIntents.appex/Contents/MacOS/MobileTimerIntents\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /System/Applications/Clock.app/Contents/PlugIns/WorldClockWidget.appex/Contents/MacOS/WorldClockWidget\n  0.0 /System/Applications/Home.app/Contents/PlugIns/HomeEnergyWidgetsExtension.appex/Contents/MacOS/HomeEnergyWidgetsExtension\n  0.0 /System/Applications/Journal.app/Contents/PlugIns/JournalWidgetsSecure.appex/Contents/MacOS/JournalWidgetsSecure\n  0.0 /System/Applications/Journal.app/Contents/PlugIns/JournalWidgets.appex/Contents/MacOS/JournalWidgets\n  0.0 /System/Applications/VoiceMemos.app/Contents/PlugIns/RecordWidgetExtension.appex/Contents/MacOS/RecordWidgetExtension\n  0.0 /System/Applications/VoiceMemos.app/Contents/PlugIns/VoiceMemosSettingsWidgetExtension.appex/Contents/MacOS/VoiceMemosSettingsWidgetExtension\n  0.0 /System/Applications/FindMy.app/Contents/PlugIns/FindMyWidgetPeople.appex/Contents/MacOS/FindMyWidgetPeople\n  0.0 /System/Applications/Podcasts.app/Contents/PlugIns/PodcastsWidget.appex/Contents/MacOS/PodcastsWidget\n  0.0 /System/Applications/Home.app/Contents/PlugIns/HomeWidget.appex/Contents/MacOS/HomeWidget\n  0.0 /System/Library/CoreServices/Batteries.app/Contents/PlugIns/BatteriesAvocadoWidgetExtension.appex/Contents/MacOS/BatteriesAvocadoWidgetExtension\n  0.0 /System/Applications/FindMy.app/Contents/PlugIns/FindMyWidgetItems.appex/Contents/MacOS/FindMyWidgetItems\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper (Renderer).app/Contents/MacOS/Slack Helper (Renderer)\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper\n  0.0 /Applications/Slack.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsTodayIntents.appex/Contents/MacOS/NewsTodayIntents\n  0.0 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetIntentsExtension.appex/Contents/MacOS/ScreenTimeWidgetIntentsExtension\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Applications/News.app/Contents/PlugIns/NewsTag.appex/Contents/MacOS/NewsTag\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport\n  0.0 /usr/sbin/distnoted\n  0.0 /Applications/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler\n  0.0 postgres: background writer \n  0.0 postgres: checkpointer \n  0.0 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetExtension.appex/Contents/MacOS/ScreenTimeWidgetExtension\n  0.0 /usr/libexec/inboxupdaterd\n  0.0 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver\n  0.0 postgres: logger \n  0.0 /System/Applications/Calendar.app/Contents/PlugIns/CalendarWidgetExtension.appex/Contents/MacOS/CalendarWidgetExtension\n  0.0 /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension\n  0.0 /usr/libexec/gamepolicyd\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp\n  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoteagent\n  0.0 /usr/libexec/avconferenced\n  0.0 /System/Library/PrivateFrameworks/TextInputUIMacHelper.framework/Versions/A/XPCServices/CursorUIViewService.xpc/Contents/MacOS/CursorUIViewService\n  0.0 /System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent\n  0.0 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd\n  0.0 /System/Library/CoreServices/UIKitSystem.app/Contents/MacOS/UIKitSystem\n  0.0 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight\n  0.0 /System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled\n  0.0 /System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.iCloudDriveFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.iCloudDriveFileProvider\n  0.0 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter\n  0.0 /System/Library/CoreServices/lockoutagent\n  0.0 /System/Library/PrivateFrameworks/CommunicationsFilter.framework/CMFSyncAgent\n  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd\n  0.0 /System/Library/ExtensionKit/Extensions/WallpaperAerialsExtension.appex/Contents/MacOS/WallpaperAerialsExtension\n  0.0 /usr/libexec/rosetta/oahd\n  0.0 /System/Library/ExtensionKit/Extensions/WallpaperSequoiaExtension.appex/Contents/MacOS/WallpaperSequoiaExtension\n  0.0 /System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod\n  0.0 /System/Library/PrivateFrameworks/AMPDevices.framework/Versions/A/Support/AMPDeviceDiscoveryAgent\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd\n  0.0 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary\n  0.0 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent\n  0.0 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd\n  0.0 /System/Library/CoreServices/sharedfilelistd\n  0.0 automountd\n  0.0 /System/Library/CoreServices/WallpaperAgent.app/Contents/MacOS/WallpaperAgent\n  0.0 /usr/sbin/filecoordinationd\n  0.0 /System/Library/CoreServices/AccessibilityUIServer.app/Contents/MacOS/AccessibilityUIServer\n  0.0 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder\n  0.0 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer\n  0.0 /usr/sbin/usernoted\n  0.0 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter\n  0.0 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd\n  0.0 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock\n  0.0 /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n  0.0 /System/Library/PrivateFrameworks/UserNotificationsCore.framework/Support/usernotificationsd\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/fontworker\n  0.0 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd\n  0.0 /usr/libexec/nsurlsessiond\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/lsd\n  0.0 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/BiomeAgent\n  0.0 /usr/libexec/pboard\n  0.0 /System/Library/CoreServices/WindowManager.app/Contents/MacOS/WindowManager\n  0.0 /usr/libexec/containermanagerd\n  0.0 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd\n  0.0 /usr/libexec/UserEventAgent\n  0.0 /usr/sbin/universalaccessd\n  0.0 /usr/sbin/cfprefsd\n  0.0 /usr/libexec/secd\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd\n  0.0 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/DriverExtensions/com.apple.DriverKit-IOUserDockChannelSerial.dext/com.apple.DriverKit-IOUserDockChannelSerial\n  0.0 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/modelmanagerd\n  0.0 /System/Library/CoreServices/appleeventsd\n  0.0 Core Audio Driver (ZoomAudioDevice.driver)\n  0.0 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/UVCAssistant.systemextension/Contents/MacOS/UVCAssistant\n  0.0 Core Audio Driver (TVRemoteAudio.driver)\n  0.0 /usr/libexec/cameracaptured\n  0.0 Core Audio Driver (ParrotAudioPlugin.driver)\n  0.0 /usr/sbin/appleh13camerad\n  0.0 ps\n  0.0 /Library/PostgreSQL/17/bin/postgres\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/audioclocksyncd\n  0.0 /usr/libexec/audiomxd\n  0.0 /usr/sbin/mDNSResponderHelper\n  0.0 /usr/sbin/WirelessRadioManagerd\n  0.0 Core Audio Driver (MSTeamsAudioDevice.driver)\n  0.0 /usr/sbin/mDNSResponder\n  0.0 /System/Library/CoreServices/TimeMachine/backupd\n  0.0 /usr/libexec/syspolicyd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/sbin/distnoted\n  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd\n  0.0 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd\n  0.0 /usr/libexec/ApplicationFirewall/socketfilterfw\n  0.0 /usr/libexec/symptomsd\n  0.0 /usr/libexec/eligibilityd\n  0.0 /usr/libexec/lsd\n  0.0 /usr/sbin/coreaudiod\n  0.0 /usr/libexec/runningboardd\n  0.0 /usr/sbin/distnoted\n  0.0 /usr/libexec/timed\n  0.0 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd\n  0.0 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd_system\n  0.0 /System/Library/CoreServices/coreservicesd\n  0.0 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow\n  0.0 /usr/sbin/cfprefsd\n  0.0 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd\n  0.0 /usr/libexec/IOMFB_bics_daemon\n  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted\n  0.0 /usr/sbin/systemstats\n  0.0 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond\n  0.0 /System/Library/CoreServices/launchservicesd\n  0.0 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored\n  0.0 /usr/sbin/syslogd\n  0.0 /usr/libexec/configd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds\n  0.0 /usr/libexec/watchdogd\n  0.0 /usr/libexec/corebrightnessd\n  0.0 /usr/sbin/KernelEventAgent\n  0.0 /usr/libexec/AirPlayXPCHelper\n  0.0 /usr/libexec/dasd\n  0.0 autofsd\n  0.0 /System/Library/CoreServices/powerd.bundle/powerd\n  0.0 /usr/sbin/securityd\n  0.0 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd\n  0.0 /usr/libexec/thermalmonitord\n  0.0 /usr/libexec/remoted\n  0.0 /usr/libexec/UserEventAgent\n  0.0 /usr/libexec/diskarbitrationd\n  0.0 /System/Library/CoreServices/logind\n  0.0 /usr/libexec/corerepaird\n  0.0 /usr/libexec/xprotectd\n  0.0 /usr/libexec/opendirectoryd\n  0.0 /usr/libexec/kernelmanagerd\n  0.0 /usr/libexec/com.apple.cmio.videodriverkithostextension.systemextension/Contents/MacOS/com.apple.cmio.videodriverkithostextension\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 Contents/Library/LoginItems/WindowDocumentResolverBroker.app/Contents/MacOS/WindowDocumentResolverBroker\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared\n  0.0 uv\n  0.0 /System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/XPCServices/PerfPowerTelemetryClientRegistrationService.xpc/Contents/MacOS/PerfPowerTelemetryClientRegistrationService\n  0.0 /usr/libexec/textunderstandingd\n  0.0 /usr/libexec/neagent\n  0.0 /usr/libexec/nehelper\n  0.0 /usr/libexec/networkserviceproxy\n  0.0 cloudphotod\n  0.0 /System/Library/PrivateFrameworks/AssetCacheServicesExtensions.framework/XPCServices/AssetCacheTetheratorService.xpc/Contents/MacOS/AssetCacheTetheratorService\n  0.0 /usr/libexec/pkd\n  0.0 /System/Library/CoreServices/TimeMachine/backupd-helper\n  0.0 /System/Library/PrivateFrameworks/GeoServices.framework/geodMachServiceBridge\n  0.0 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd\n  0.0 /usr/libexec/AssetCache/AssetCache\n  0.0 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService\n  0.0 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd\n  0.0 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted_helper\n  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService\n  0.0 /System/Library/CoreServices/ScopedBookmarkAgent\n  0.0 /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd\n  0.0 /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd"
+    }
+  },
+  "artifacts": {
+    "fp32": {
+      "filename": "lab4_fp32.onnx",
+      "bytes": 44708875,
+      "megabytes": 44.708875,
+      "sha256": "e5d9fe102f05a740f232206335232c0eba6f0977602ac588e1faaae39bed0e8a"
+    },
+    "prepared": {
+      "filename": "lab4_fp32_prepared.onnx",
+      "bytes": 44712599,
+      "megabytes": 44.712599,
+      "sha256": "5a76c48f16c9b656209357fa41d71b6aeed3d7ebdb6546e58966b469a6b40b4c"
+    },
+    "int8": {
+      "filename": "lab4_int8.onnx",
+      "bytes": 11297278,
+      "megabytes": 11.297278,
+      "sha256": "2479efe0b689b69eca3d1d8a79eada4e5ab6130bac75be585f42f51f312f8a7a"
+    },
+    "int8_per_tensor": {
+      "filename": "lab4_int8_per_tensor.onnx",
+      "bytes": 11234127,
+      "megabytes": 11.234127,
+      "sha256": "9c57d0587a83d7a2f076f407d193c004d1a83d56ccd35ec49f26f556f172c255"
+    }
+  },
+  "size_reduction_fp32_over_int8": 3.957490910642369,
+  "source_files_sha256": {
+    "data.py": "c691174279e71a9f0bd749a893d386129c0921dcd50e199218fdc037088f12d8",
+    "download_data.py": "035afadaf40079ed4aeba7874b84251f43bef25a40542f26b5b6f0f33ef0dde8",
+    "main.py": "5edfe1bd39604c0b65a7e491c2c04703a81979aa39b23b402e6ae7c204f95c85",
+    "metrics.py": "1295e0a61161f7c509d3cb87ca6a196e21fb511dfd101d5de7803f1c44874a96",
+    "pyproject.toml": "364b7fd659fce1617f8bd8805c2f49b4bd420157c7575847edfde32a4dcdc248",
+    "quantization.py": "c19fa5ba73e21798cbb15190566bd21bf7ca21369a59041c8704ba86258f3018",
+    "reporting.py": "78dadc1637af88db4892d2ae656ac9136000af4dbbfaf6ac84a4d78c9d1ef309",
+    "test_metrics.py": "8d10f1671b59e4789c5a83f8b5029b53f6613d974cbecc577b767079a5212e3e",
+    "uv.lock": "ade752ecec3490a7cb85f8de86b0b7a54c45f39fa2a556e059553b251f92dc5c"
+  },
+  "settings_deviations": [],
+  "report_generation": {
+    "updated_at_utc": "2026-11-26T19:35:40.357822+00:00",
+    "template_sha256": "78dadc1637af88db4892d2ae656ac9136000af4dbbfaf6ac84a4d78c9d1ef309",
+    "changes": "Standalone launcher, local model and split, automatic dataset preparation; measured numbers and original forecast unchanged",
+    "template_sha256_at_measurement": "e89899197add3a173751fd5b744ee0bdc716abfe558134b0b85e9568c94ab173"
+  }
+}

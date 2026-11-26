@@ -1,0 +1,13 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+EXPLANATION.md
+data/
+*.onnx
+*.onnx.data
+reproduced/
+reproduced_run*/
+*.log
+experiment/

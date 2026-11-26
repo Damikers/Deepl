@@ -1,0 +1,18 @@
+[project]
+name = "sgn-lab4-fp32-int8"
+version = "0.1.0"
+description = "ЛР4: статична квантизація ResNet-18 та порівняння FP32 з INT8 на CPU"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==2.3.3",
+    "scikit-learn==1.7.2",
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "onnx==1.19.1",
+    "onnxruntime==1.23.2",
+    "pillow==11.3.0",
+]
+
+[tool.uv]
+package = false
