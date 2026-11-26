@@ -188,7 +188,7 @@ SE(\Delta_{acc})\approx\frac{\sqrt{b+c}}{1502}.
 
 ```math
 \alpha_c=\max_{i,h,w}|W_{c,i,h,w}|,\qquad
-r=\frac{\max_c\alpha_c}{\operatorname{median}_c\alpha_c}.
+r=\frac{\max_c\alpha_c}{\mathrm{median}_c\alpha_c}.
 ```
 
 Три згортки з найбільшим r:

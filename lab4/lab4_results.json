@@ -2663,15 +2663,15 @@
     "metrics.py": "1295e0a61161f7c509d3cb87ca6a196e21fb511dfd101d5de7803f1c44874a96",
     "pyproject.toml": "364b7fd659fce1617f8bd8805c2f49b4bd420157c7575847edfde32a4dcdc248",
     "quantization.py": "c19fa5ba73e21798cbb15190566bd21bf7ca21369a59041c8704ba86258f3018",
-    "reporting.py": "78dadc1637af88db4892d2ae656ac9136000af4dbbfaf6ac84a4d78c9d1ef309",
+    "reporting.py": "fc05869322eaa8eba7fc3ccf8c0182b798050ada09b594f0e4526caf06961ab0",
     "test_metrics.py": "8d10f1671b59e4789c5a83f8b5029b53f6613d974cbecc577b767079a5212e3e",
     "uv.lock": "ade752ecec3490a7cb85f8de86b0b7a54c45f39fa2a556e059553b251f92dc5c"
   },
   "settings_deviations": [],
   "report_generation": {
-    "updated_at_utc": "2026-11-26T19:35:40.357822+00:00",
-    "template_sha256": "78dadc1637af88db4892d2ae656ac9136000af4dbbfaf6ac84a4d78c9d1ef309",
-    "changes": "Standalone launcher, local model and split, automatic dataset preparation; measured numbers and original forecast unchanged",
+    "updated_at_utc": "2026-11-26T19:46:15.445978+00:00",
+    "template_sha256": "fc05869322eaa8eba7fc3ccf8c0182b798050ada09b594f0e4526caf06961ab0",
+    "changes": "Use supported math formatting for the channel-range median; measurements and original forecast unchanged",
     "template_sha256_at_measurement": "e89899197add3a173751fd5b744ee0bdc716abfe558134b0b85e9568c94ab173"
   }
 }
